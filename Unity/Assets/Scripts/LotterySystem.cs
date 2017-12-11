@@ -26,7 +26,7 @@ public class LotterySystem : MonoBehaviour {
 	void Update () {
 		if (GameManager.state == GameManager.STATE.Wait) {
 			if (!showFlag) {
-				shownNumbers = new GameObject[2];
+				shownNumbers = new GameObject[8];
 				for (int i = 0; i < shownNumbers.Length; i++) {
 					shownNumbers [i] = Instantiate (lotteryNumberObject, this.transform) as GameObject;
 					StartCoroutine(ShowNumber (i, 100 * i));
