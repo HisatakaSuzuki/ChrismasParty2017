@@ -35,7 +35,8 @@ public class LotterySystem : MonoBehaviour {
 			}
 		}
 		else if (GameManager.state == GameManager.STATE.Lottery) {//抽選
-			StartCoroutine ("Lottery");
+			if (Input.GetKeyDown (KeyCode.R))
+				StartCoroutine ("Lottery");
 		} else if(GameManager.state == GameManager.STATE.PresentShow || GameManager.state == GameManager.STATE.End){
 			showFlag = false;
 		}

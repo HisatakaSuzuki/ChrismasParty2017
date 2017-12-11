@@ -75,16 +75,11 @@ public class GameManager : MonoBehaviour {
 				luckyPresonIndex++;
 				state = STATE.Lottery;
 			}
-			if (Input.GetKeyDown(KeyCode.S))
-			{//プレゼントの当選者が表れた
-				presentIndex++;
-				luckyPresonIndex = -1;
-				state = STATE.PresentShow;
-			}
 		}
 		else if (state == STATE.Lottery)
 		{
-			GameManager.state = GameManager.STATE.Wait;
+			if(Input.GetKeyDown(KeyCode.A))
+				GameManager.state = GameManager.STATE.PresentShow;
 		}
 		else if (state == STATE.End)
 		{//ゲーム終了
@@ -94,7 +89,8 @@ public class GameManager : MonoBehaviour {
 		//終了条件
 		if (presentIndex >= presentNum)
 		{
-			GameManager.state = GameManager.STATE.End;
+			if(Input.GetKeyDown(KeyCode.A))
+				GameManager.state = GameManager.STATE.End;
 		}
 	}
 }
