@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
+
 public class GameManager : MonoBehaviour {
 	public enum STATE
 	{
@@ -32,24 +34,49 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+    static public int max = 0;
+    static public int[] aList;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		//当選番号配列の準備
-		using (StreamReader sr = new StreamReader("test.csv"))
+		using (StreamReader sr = new StreamReader("num.txt"))
 		{
-			int i = 0;
 			while (!sr.EndOfStream)
 			{
-				var tmp = sr.ReadLine().Split(',');
-				for (int j = 0; j < luckyPersonNum; j++)
-				{
-					luckyNumbers[i, j] = int.Parse(tmp[j]);
-				}
-				i++;
+				var tmp = sr.ReadLine();
+					max = int.Parse(tmp);
 			}
 		}
-		GameManager.state = GameManager.STATE.Howto;
+
+        aList = new int[max];
+        for (int i = 0; i < max; i++)
+        {
+            aList[i] = i+1;
+        }
+
+        //システム時間をintで取得
+        int seed = DateTime.Now.Hour * 60 * 60 * 1000 + DateTime.Now.Minute * 60 * 1000 +
+    DateTime.Now.Second * 1000 + DateTime.Now.Millisecond;
+        int temp = 0;
+
+        System.Random _random = new System.Random(seed);
+
+        for (int i = 0; i < max; i++)
+        {
+            int r = i + (int)(_random.NextDouble() * (max - i));
+            temp = aList[r];
+            aList[r] = aList[i];
+            aList[i] = temp;
+        }
+
+        /* デバッグ */
+        //for (int i = 0; i < max; i++)
+        //{
+        //    Debug.Log(aList[i]);
+        //}
+
+        GameManager.state = GameManager.STATE.Howto;
 		//audioSource = this.gameObject.GetComponent<AudioSource>();
 		//audioSource.clip = bgm[0];
 		//audioSource.Play();
@@ -75,22 +102,28 @@ public class GameManager : MonoBehaviour {
 				luckyPresonIndex++;
 				state = STATE.Lottery;
 			}
+			if (Input.GetKeyDown(KeyCode.S))
+			{//プレゼントの当選者が表れた
+				presentIndex++;
+				luckyPresonIndex = -1;
+				state = STATE.PresentShow;
+			}
 		}
 		else if (state == STATE.Lottery)
 		{
-			if(Input.GetKeyDown(KeyCode.A))
-				GameManager.state = GameManager.STATE.PresentShow;
+            if (Input.GetKeyDown(KeyCode.A))
+                GameManager.state = GameManager.STATE.PresentShow;
 		}
 		else if (state == STATE.End)
 		{//ゲーム終了
-			
-		}
+            if (Input.GetKeyDown(KeyCode.A))
+            GameManager.state = GameManager.STATE.End;
+        }
 
-		//終了条件
-		if (presentIndex >= presentNum)
+        //終了条件
+        if (presentIndex >= presentNum)
 		{
-			if(Input.GetKeyDown(KeyCode.A))
-				GameManager.state = GameManager.STATE.End;
+			GameManager.state = GameManager.STATE.End;
 		}
 	}
 }

@@ -17,10 +17,12 @@ public class LotterySystem : MonoBehaviour {
 
 	bool showFlag;
 
-	// Use this for initialization
-	void Start () {
+    private int lotteryCount = 0;
+
+    // Use this for initialization
+    void Start () {
 		showFlag = false;
-	}
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -33,11 +35,18 @@ public class LotterySystem : MonoBehaviour {
 				}
 				showFlag = true;
 			}
-		}
-		else if (GameManager.state == GameManager.STATE.Lottery) {//抽選
-			if (Input.GetKeyDown (KeyCode.R))
+
+            if (Input.GetKeyDown(KeyCode.R))
+                lotteryCount++;
+            StartCoroutine("Lottery");
+
+        }
+        else if (GameManager.state == GameManager.STATE.Lottery) {//抽選
+            if (Input.GetKeyDown(KeyCode.R))
 				StartCoroutine ("Lottery");
-		} else if(GameManager.state == GameManager.STATE.PresentShow || GameManager.state == GameManager.STATE.End){
+                lotteryCount++;
+        }
+        else if(GameManager.state == GameManager.STATE.PresentShow || GameManager.state == GameManager.STATE.End){
 			showFlag = false;
 		}
 	}
@@ -57,14 +66,14 @@ public class LotterySystem : MonoBehaviour {
     IEnumerator Lottery()
     {
         for (; ; )
-        {   
+        {
             yield return new WaitForSeconds(sleepTime);
-            lotteryText.text = Random.Range(1, 601).ToString();
+            shownNumbers[0].GetComponent<Text>().text = GameManager.aList[lotteryCount].ToString();
             sleepTime = sleepTime + Time.deltaTime / seed;
             if (sleepTime > 0.5f)
             {
                 sleepTime = 0.1f;
-				lotteryText.text = GameManager.LuckyNumber;
+				//lotteryText.text = GameManager.LuckyNumber;
                 break;
             }
         }
