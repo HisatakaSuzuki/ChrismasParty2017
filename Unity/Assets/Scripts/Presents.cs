@@ -7,36 +7,64 @@ public class Presents : MonoBehaviour {
 	public Texture2D[] presentTexture;
 
 	RawImage rawImage;
+	RectTransform rect;
 	Color color;
 
 	bool alphaFlag;
 
+	float ratio;
+	int i = 0;
+	public float max = 600.0f;
 	// Use this for initialization
 	void Start () {
 		rawImage = this.GetComponent<RawImage> ();
 		rawImage.texture = presentTexture [0];
-		color = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, .0f);
-		rawImage.color = color;
-
+//		rect = this.GetComponent<RectTransform> ();
+//		rect.sizeDelta = CalculateRectSize (presentTexture [0].width, presentTexture [0].height, max);
+//		color = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, .0f);
+//		rawImage.color = color;
+//
 		alphaFlag = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameManager.state == GameManager.STATE.PresentShow) {
-			if (!alphaFlag) {
-				color.a = 1.0f;
-				rawImage.color = color;
-				alphaFlag = true;
-			}
+//		if (GameManager.state == GameManager.STATE.PresentShow) {
+//			if (!alphaFlag) {
+//				rawImage.texture = presentTexture [i];
+//				ratio = presentTexture [i].width / presentTexture [i].height;
+//				Debug.Log (presentTexture [i].width + "," + presentTexture [i].height);
+//				rect.sizeDelta = CalculateRectSize (presentTexture [i].width, presentTexture [i].height, max);
+//				color = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, .0f);
+//				rawImage.color = color;
+//				color.a = 1.0f;
+//				rawImage.color = color;
+//				alphaFlag = true;
+//			}
+//
+//		} else if (GameManager.state == GameManager.STATE.Wait) {
+//			if (alphaFlag) {
+//				i++;
+//				color.a = 0.0f;
+//				rawImage.color = color;
+//				alphaFlag = false;
+//			}
+//		}
+	}
 
-		} else if (GameManager.state == GameManager.STATE.Wait) {
-			if (alphaFlag) {
-				color.a = 0.0f;
-				rawImage.color = color;
-				alphaFlag = false;
-			}
+	Vector2 CalculateRectSize(float w, float h, float m){
+		Vector2 output;
+		float ratio;
+
+		if (w >= h) {
+			ratio = h / w;
+			output = new Vector2 (m, m * ratio);
+		} else {
+			ratio = w / h;
+			output = new Vector2 (m * ratio, m);
 		}
+
+		return output;
 	}
 		
 }
