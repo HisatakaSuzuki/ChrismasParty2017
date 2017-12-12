@@ -7,15 +7,20 @@ using System.IO;
 
 
 public class LotterySystem : MonoBehaviour {
-	public GameObject lotteryNumberObject;
-	GameObject[] shownNumbers;
-    Text lotteryText;
-	Color textColor;
+	public GameObject lotteryNumberObject;	//スロット用番号テキストのプレハブ
+
+	GameObject[] showNumbers;	//実際に表示するスロットのテキストオブジェクト
+    
+	Text[] lotteryText;	//showNumberのTextコンポーネントを格納
 
     public float sleepTime = 0.1f;
     public float seed = 1.0f;
 
 	bool showFlag;
+
+	float[] endTimes = new float[8]{
+		0.3f,0.32f,0.34f,0.36f,0.38f,0.4f,0.42f,0.44f
+	};
 
     private int lotteryCount = 0;
 
@@ -28,52 +33,64 @@ public class LotterySystem : MonoBehaviour {
 	void Update () {
 		if (GameManager.state == GameManager.STATE.Wait) {
 			if (!showFlag) {
-				shownNumbers = new GameObject[8];
-				for (int i = 0; i < shownNumbers.Length; i++) {
-					shownNumbers [i] = Instantiate (lotteryNumberObject, this.transform) as GameObject;
+				showNumbers = new GameObject[8];
+				lotteryText = new Text[8];
+				for (int i = 0; i < showNumbers.Length; i++) {
+					showNumbers [i] = Instantiate (lotteryNumberObject, this.transform) as GameObject;
 					StartCoroutine(ShowNumber (i, 100 * i));
 				}
 				showFlag = true;
 			}
 
-            if (Input.GetKeyDown(KeyCode.R))
-                lotteryCount++;
-            StartCoroutine("Lottery");
-
+			if (Input.GetKeyDown (KeyCode.R)) {
+				lotteryCount++;
+				for (int i = 0; i < showNumbers.Length; i++) {
+					StartCoroutine(Lottery(i,endTimes[i]));
+				}
+			}
+                
         }
         else if (GameManager.state == GameManager.STATE.Lottery) {//抽選
             if (Input.GetKeyDown(KeyCode.R))
-				StartCoroutine ("Lottery");
+				//StartCoroutine ("Lottery");
                 lotteryCount++;
         }
         else if(GameManager.state == GameManager.STATE.PresentShow || GameManager.state == GameManager.STATE.End){
+			if (showNumbers != null) {
+				foreach (var s in showNumbers)
+					Destroy (s);
+			}
+			showNumbers = null;
 			showFlag = false;
 		}
 	}
 
 	IEnumerator ShowNumber(int i, float distY){
-		Text t = shownNumbers [i].GetComponent<Text> ();
+		lotteryText[i] = showNumbers [i].GetComponent<Text> ();
 		for (; ; ) {
 			yield return new WaitForSeconds (0.01f);
-			Color c = new Color (.0f, .0f, .0f, t.color.a + 0.01f);
-			t.color = c;
-			if (t.color.a >= 0.8f) {
+			Color c = new Color (.0f, .0f, .0f, lotteryText[i].color.a + 0.01f);
+			lotteryText[i].color = c;
+			if (lotteryText[i].color.a >= 0.8f) {
 				break;
 			}
 		}
 	}
 
-    IEnumerator Lottery()
+	IEnumerator Lottery(int i, float endtime)
     {
+		float time = 0.0f;
         for (; ; )
         {
             yield return new WaitForSeconds(sleepTime);
-            shownNumbers[0].GetComponent<Text>().text = GameManager.aList[lotteryCount].ToString();
-            sleepTime = sleepTime + Time.deltaTime / seed;
-            if (sleepTime > 0.5f)
+			//showNumbers[i].GetComponent<Text>().text = GameManager.aList[lotteryCount].ToString();
+			lotteryText[i].text = Random.Range(1,601).ToString();//あとで1~maxまでに変更する
+			time += Time.deltaTime;
+			if (i == 0)
+				Debug.Log (time);
+			if (time > endtime)
             {
-                sleepTime = 0.1f;
-				//lotteryText.text = GameManager.LuckyNumber;
+				lotteryText[i].text = GameManager.aList[lotteryCount].ToString();
                 break;
             }
         }

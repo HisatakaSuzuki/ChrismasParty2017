@@ -222,7 +222,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presentTexture:
-  - {fileID: 2800000, guid: adf874e89e452284faf627ac7f2f90e3, type: 3}
+  - {fileID: 2800000, guid: ab7d3514299d26d48b3396a95833db4f, type: 3}
+  - {fileID: 2800000, guid: 94276ac395c69cd4e9366c0961105ae2, type: 3}
+  - {fileID: 2800000, guid: 568f5ffc46af1c949a774b0d65d79a85, type: 3}
+  - {fileID: 2800000, guid: 1bc31ace5aad4264798f090fafa06cfc, type: 3}
+  - {fileID: 2800000, guid: bb5ac83cd6f584a4bb488452d97ab7c0, type: 3}
+  - {fileID: 2800000, guid: cc6a79ff0baf4924ebcdcafc6dbdb4f3, type: 3}
+  - {fileID: 2800000, guid: c31dc33ab081aa44eaf469c7a9cebc6b, type: 3}
+  - {fileID: 2800000, guid: cb565ad68ed8c174a96e3d3c26fa8f5a, type: 3}
+  max: 600
 --- !u!114 &162321728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -321,7 +329,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 300, y: 200}
