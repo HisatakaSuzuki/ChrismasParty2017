@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour {
 		Setup,
 		Howto,
 		PresentShow,
-		Wait,
 		Lottery,
 		End
 	}
@@ -28,6 +27,7 @@ public class GameManager : MonoBehaviour {
 	public Text test;
     static public int max = 0;
     static public int[] winnersNumberList;
+
     static public int[] luckyPersonNum = { 5,7,4,2,1,1,6,9,2,1,1,
                                     1,1,1,1,1,1,1,1,1,
                                     1,1,1,1,1,1,1,1,1,1,1
@@ -90,28 +90,16 @@ public class GameManager : MonoBehaviour {
 		{//プレゼントの紹介
 			if(Input.GetKeyDown(KeyCode.A))
 			{
-				state = STATE.Wait;
+				state = STATE.Lottery;
 			}
 		}
-		else if (state == STATE.Wait)
+		else if (state == STATE.Lottery)
 		{//入力待機・プレゼントが渡ったかどうかの判定待ち
 			if (Input.GetKeyDown(KeyCode.A))
 			{
                 presentIndex++;
-                state = STATE.Lottery;
+                state = STATE.PresentShow;
 			}
-			if (Input.GetKeyDown(KeyCode.S))
-			{//プレゼントの当選者が表れた
-				presentIndex++;
-				luckyPresonIndex = -1;
-				state = STATE.PresentShow;
-			}
-		}
-		else if (state == STATE.Lottery)
-		{
-            if (Input.GetKeyDown(KeyCode.A))
-                presentIndex++;
-                GameManager.state = GameManager.STATE.PresentShow;
 		}
 		else if (state == STATE.End)
 		{//ゲーム終了

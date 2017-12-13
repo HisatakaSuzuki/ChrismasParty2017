@@ -31,7 +31,7 @@ public class LotterySystem : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (GameManager.state == GameManager.STATE.Wait) {
+		if (GameManager.state == GameManager.STATE.Lottery) {
 			if (!showFlag) {
 				showNumbers = new GameObject[GameManager.luckyPersonNum[GameManager.presentIndex]];
 				lotteryText = new Text[GameManager.luckyPersonNum[GameManager.presentIndex]];
@@ -48,11 +48,6 @@ public class LotterySystem : MonoBehaviour {
 					StartCoroutine(Lottery(i,endTimes[i]));
 				}
 			}               
-        }
-        else if (GameManager.state == GameManager.STATE.Lottery) {//抽選
-            if (Input.GetKeyDown(KeyCode.R))
-				//StartCoroutine ("Lottery");
-                lotteryCount++;
         }
         else if(GameManager.state == GameManager.STATE.PresentShow || GameManager.state == GameManager.STATE.End){
 			if (showNumbers != null) {
