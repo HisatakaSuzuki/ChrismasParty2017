@@ -21,6 +21,7 @@ public class LotterySystem : MonoBehaviour {
 	float[] endTimes = new float[8]{
 		0.3f,0.32f,0.34f,0.36f,0.38f,0.4f,0.42f,0.44f
 	};
+    float restrictionTime = 0.0f;
 
     private int lotteryCount = 0;
 
@@ -31,8 +32,11 @@ public class LotterySystem : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (GameManager.state == GameManager.STATE.Lottery) {
-			if (!showFlag) {
+        restrictionTime += Time.deltaTime;
+
+        if (GameManager.state == GameManager.STATE.Lottery) {
+
+            if (!showFlag) {
 				showNumbers = new GameObject[GameManager.luckyPersonNum[GameManager.presentIndex]];
 				lotteryText = new Text[GameManager.luckyPersonNum[GameManager.presentIndex]];
                 for (int i = 0; i < showNumbers.Length; i++) {
@@ -42,9 +46,10 @@ public class LotterySystem : MonoBehaviour {
 				}
 				showFlag = true;
 			}
-
-			if (Input.GetKeyDown (KeyCode.R)) {
-				for (int i = 0; i < showNumbers.Length; i++) {
+            Debug.Log(restrictionTime);
+            if (Input.GetKeyDown(KeyCode.R) && restrictionTime > 2.0f) {
+                restrictionTime = 0.0f;
+                for (int i = 0; i < showNumbers.Length; i++) {
 					StartCoroutine(Lottery(i,endTimes[i]));
 				}
 			}               
