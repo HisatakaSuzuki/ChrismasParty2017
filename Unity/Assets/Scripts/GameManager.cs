@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 	public enum STATE
@@ -24,10 +25,10 @@ public class GameManager : MonoBehaviour {
 
 	static public int presentIndex = 0;
 	static int luckyPresonIndex = -1;
-
+	public Text test;
     static public int max = 0;
     static public int[] winnersNumberList;
-    static public int[] luckyPersonNum = { 1,1,1,1,1,1,1,1,2,1,1,
+    static public int[] luckyPersonNum = { 5,7,4,2,1,1,6,9,2,1,1,
                                     1,1,1,1,1,1,1,1,1,
                                     1,1,1,1,1,1,1,1,1,1,1
                                   };
@@ -63,7 +64,9 @@ public class GameManager : MonoBehaviour {
             temp = winnersNumberList[r];
             winnersNumberList[r] = winnersNumberList[i];
             winnersNumberList[i] = temp;
+			test.text += winnersNumberList [i].ToString () + ",";
         }
+
 
         /* デバッグ */
         //for (int i = 0; i < max; i++)

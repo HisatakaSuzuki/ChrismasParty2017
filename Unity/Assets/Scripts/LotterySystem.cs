@@ -85,11 +85,9 @@ public class LotterySystem : MonoBehaviour {
 				//showNumbers[i].GetComponent<Text>().text = GameManager.aList[lotteryCount].ToString();
 				lotteryText[i].text = Random.Range(1,601).ToString();//あとで1~maxまでに変更する
 				time += Time.deltaTime;
-				if (i == 0)
-					Debug.Log (time);
 				if (time > endtime)
 				{
-					lotteryText[i].text = GameManager.winnersNumberList[lotteryCount+i].ToString();
+					lotteryText[i].text = GameManager.winnersNumberList[lotteryCount].ToString();
 					break;
 				}
 			}
