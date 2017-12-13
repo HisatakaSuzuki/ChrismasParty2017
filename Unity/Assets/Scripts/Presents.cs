@@ -28,31 +28,15 @@ public class Presents : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-//		if (GameManager.state == GameManager.STATE.PresentShow) {
-//			if (!alphaFlag) {
-//				rawImage.texture = presentTexture [i];
-//				ratio = presentTexture [i].width / presentTexture [i].height;
-//				Debug.Log (presentTexture [i].width + "," + presentTexture [i].height);
-//				rect.sizeDelta = CalculateRectSize (presentTexture [i].width, presentTexture [i].height, max);
-//				color = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, .0f);
-//				rawImage.color = color;
-//				color.a = 1.0f;
-//				rawImage.color = color;
-//				alphaFlag = true;
-//			}
-//
-//		} else if (GameManager.state == GameManager.STATE.Wait) {
-//			if (alphaFlag) {
-//				i++;
-//				color.a = 0.0f;
-//				rawImage.color = color;
-//				alphaFlag = false;
-//			}
-//		}
-	}
+	void Update ()
+    {
+    	if (GameManager.state == GameManager.STATE.PresentShow)
+        {//プレゼントの紹介
+            rawImage.texture = presentTexture[GameManager.presentIndex];
+        }
+    }
 
-	Vector2 CalculateRectSize(float w, float h, float m){
+    Vector2 CalculateRectSize(float w, float h, float m){
 		Vector2 output;
 		float ratio;
 

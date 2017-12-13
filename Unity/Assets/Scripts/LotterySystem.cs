@@ -33,9 +33,9 @@ public class LotterySystem : MonoBehaviour {
 	void Update () {
 		if (GameManager.state == GameManager.STATE.Wait) {
 			if (!showFlag) {
-				showNumbers = new GameObject[8];
-				lotteryText = new Text[8];
-				for (int i = 0; i < showNumbers.Length; i++) {
+				showNumbers = new GameObject[GameManager.luckyPersonNum[GameManager.presentIndex]];
+				lotteryText = new Text[GameManager.luckyPersonNum[GameManager.presentIndex]];
+                for (int i = 0; i < showNumbers.Length; i++) {
 					showNumbers [i] = Instantiate (lotteryNumberObject, this.transform) as GameObject;
 					lotteryText [i] = showNumbers [i].GetComponent<Text> ();
 					StartCoroutine(ShowNumber (i, 100 * i));
@@ -44,7 +44,6 @@ public class LotterySystem : MonoBehaviour {
 			}
 
 			if (Input.GetKeyDown (KeyCode.R)) {
-				lotteryCount++;
 				for (int i = 0; i < showNumbers.Length; i++) {
 					StartCoroutine(Lottery(i,endTimes[i]));
 				}
@@ -90,10 +89,11 @@ public class LotterySystem : MonoBehaviour {
 					Debug.Log (time);
 				if (time > endtime)
 				{
-					lotteryText[i].text = GameManager.aList[lotteryCount].ToString();
+					lotteryText[i].text = GameManager.winnersNumberList[lotteryCount+i].ToString();
 					break;
 				}
 			}
-		}
+            lotteryCount++;
+        }
     }
 }

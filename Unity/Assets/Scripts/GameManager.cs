@@ -21,21 +21,16 @@ public class GameManager : MonoBehaviour {
 	AudioSource audioSource;
 
 	const int presentNum = 30;
-	const int luckyPersonNum = 20;
 
-	static int[,] luckyNumbers = new int[presentNum,luckyPersonNum];
-
-	static int presentIndex = 0;
+	static public int presentIndex = 0;
 	static int luckyPresonIndex = -1;
 
-	public static string LuckyNumber{
-		get{
-			return luckyNumbers [presentIndex, luckyPresonIndex].ToString();
-		}
-	}
-
     static public int max = 0;
-    static public int[] aList;
+    static public int[] winnersNumberList;
+    static public int[] luckyPersonNum = { 1,1,1,1,1,1,1,1,2,1,1,
+                                    1,1,1,1,1,1,1,1,1,
+                                    1,1,1,1,1,1,1,1,1,1,1
+                                  };
 
     // Use this for initialization
     void Start () {
@@ -49,10 +44,10 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 
-        aList = new int[max];
+        winnersNumberList = new int[max];
         for (int i = 0; i < max; i++)
         {
-            aList[i] = i+1;
+            winnersNumberList[i] = i+1;
         }
 
         //システム時間をintで取得
@@ -65,15 +60,15 @@ public class GameManager : MonoBehaviour {
         for (int i = 0; i < max; i++)
         {
             int r = i + (int)(_random.NextDouble() * (max - i));
-            temp = aList[r];
-            aList[r] = aList[i];
-            aList[i] = temp;
+            temp = winnersNumberList[r];
+            winnersNumberList[r] = winnersNumberList[i];
+            winnersNumberList[i] = temp;
         }
 
         /* デバッグ */
         //for (int i = 0; i < max; i++)
         //{
-        //    Debug.Log(aList[i]);
+        //    Debug.Log(winnersNumberList[i]);
         //}
 
         GameManager.state = GameManager.STATE.Howto;
@@ -99,8 +94,8 @@ public class GameManager : MonoBehaviour {
 		{//入力待機・プレゼントが渡ったかどうかの判定待ち
 			if (Input.GetKeyDown(KeyCode.A))
 			{
-				luckyPresonIndex++;
-				state = STATE.Lottery;
+                presentIndex++;
+                state = STATE.Lottery;
 			}
 			if (Input.GetKeyDown(KeyCode.S))
 			{//プレゼントの当選者が表れた
@@ -112,6 +107,7 @@ public class GameManager : MonoBehaviour {
 		else if (state == STATE.Lottery)
 		{
             if (Input.GetKeyDown(KeyCode.A))
+                presentIndex++;
                 GameManager.state = GameManager.STATE.PresentShow;
 		}
 		else if (state == STATE.End)
