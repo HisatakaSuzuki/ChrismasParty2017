@@ -37,6 +37,7 @@ public class LotterySystem : MonoBehaviour {
 				lotteryText = new Text[8];
 				for (int i = 0; i < showNumbers.Length; i++) {
 					showNumbers [i] = Instantiate (lotteryNumberObject, this.transform) as GameObject;
+					lotteryText [i] = showNumbers [i].GetComponent<Text> ();
 					StartCoroutine(ShowNumber (i, 100 * i));
 				}
 				showFlag = true;
@@ -65,7 +66,6 @@ public class LotterySystem : MonoBehaviour {
 	}
 
 	IEnumerator ShowNumber(int i, float distY){
-		lotteryText[i] = showNumbers [i].GetComponent<Text> ();
 		for (; ; ) {
 			yield return new WaitForSeconds (0.01f);
 			Color c = new Color (.0f, .0f, .0f, lotteryText[i].color.a + 0.01f);
@@ -78,20 +78,22 @@ public class LotterySystem : MonoBehaviour {
 
 	IEnumerator Lottery(int i, float endtime)
     {
-		float time = 0.0f;
-        for (; ; )
-        {
-            yield return new WaitForSeconds(sleepTime);
-			//showNumbers[i].GetComponent<Text>().text = GameManager.aList[lotteryCount].ToString();
-			lotteryText[i].text = Random.Range(1,601).ToString();//あとで1~maxまでに変更する
-			time += Time.deltaTime;
-			if (i == 0)
-				Debug.Log (time);
-			if (time > endtime)
-            {
-				lotteryText[i].text = GameManager.aList[lotteryCount].ToString();
-                break;
-            }
-        }
+		if (!showNumbers [i].GetComponent<LotteryNumber> ().isAtari) {
+			float time = 0.0f;
+			for (; ; )
+			{
+				yield return new WaitForSeconds(sleepTime);
+				//showNumbers[i].GetComponent<Text>().text = GameManager.aList[lotteryCount].ToString();
+				lotteryText[i].text = Random.Range(1,601).ToString();//あとで1~maxまでに変更する
+				time += Time.deltaTime;
+				if (i == 0)
+					Debug.Log (time);
+				if (time > endtime)
+				{
+					lotteryText[i].text = GameManager.aList[lotteryCount].ToString();
+					break;
+				}
+			}
+		}
     }
 }
