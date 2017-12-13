@@ -47,8 +47,7 @@ public class LotterySystem : MonoBehaviour {
 				for (int i = 0; i < showNumbers.Length; i++) {
 					StartCoroutine(Lottery(i,endTimes[i]));
 				}
-			}
-                
+			}               
         }
         else if (GameManager.state == GameManager.STATE.Lottery) {//抽選
             if (Input.GetKeyDown(KeyCode.R))
