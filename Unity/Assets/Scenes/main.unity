@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 1348436653}
   - component: {fileID: 1348436652}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Debugtext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -682,6 +682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgm: []
   test: {fileID: 1348436652}
+  lotterySystem: {fileID: 228997386}
 --- !u!4 &1557352559
 Transform:
   m_ObjectHideFlags: 0
