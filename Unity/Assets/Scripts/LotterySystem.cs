@@ -46,7 +46,6 @@ public class LotterySystem : MonoBehaviour {
 				}
 				showFlag = true;
 			}
-            Debug.Log(restrictionTime);
             if (Input.GetKeyDown(KeyCode.R) && restrictionTime > 2.0f) {
                 restrictionTime = 0.0f;
                 for (int i = 0; i < showNumbers.Length; i++) {
