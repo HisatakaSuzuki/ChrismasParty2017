@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour {
                                     1,1,1,1,1,1,1,1,1,1,1
                                   };
 
+	public GameObject lotterySystem;
+
     // Use this for initialization
     void Start () {
 		//当選番号配列の準備
@@ -95,7 +97,14 @@ public class GameManager : MonoBehaviour {
 		}
 		else if (state == STATE.Lottery)
 		{//入力待機・プレゼントが渡ったかどうかの判定待ち
-			if (Input.GetKeyDown(KeyCode.A))
+			LotteryNumber[] tmp = lotterySystem.GetComponentsInChildren<LotteryNumber>();
+			bool next = false;
+			for (int i = 0; i < tmp.Length; i++) {
+				next = tmp [i].isAtari;
+				if (!tmp [i].isAtari)	break;
+			}
+
+			if (Input.GetKeyDown(KeyCode.A) && next)
 			{
                 presentIndex++;
                 state = STATE.PresentShow;
