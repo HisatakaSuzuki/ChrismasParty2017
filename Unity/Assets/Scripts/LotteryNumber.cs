@@ -18,6 +18,6 @@ public class LotteryNumber : MonoBehaviour{
 		
 	}
 	public void OnSelect(){
-		isAtari = true;
+		isAtari = !isAtari;
 	}
 }
