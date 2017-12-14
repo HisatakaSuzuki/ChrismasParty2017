@@ -28,10 +28,10 @@ public class GameManager : MonoBehaviour {
     static public int max = 0;
     static public int[] winnersNumberList;
 
-    static public int[] luckyPersonNum = { 5,7,4,2,1,1,6,9,2,1,1,
-                                    1,1,1,1,1,1,1,1,1,
-                                    1,1,1,1,1,1,1,1,1,1,1
-                                  };
+    static public int[] luckyPersonNum = { 8,3,1,1,1,1,1,1,2,1,1,
+                                           1,1,1,1,1,1,1,1,1,
+                                           1,1,1,1,1,1,1,1,1,1,1
+                                         };
 
 	public GameObject lotterySystem;
 

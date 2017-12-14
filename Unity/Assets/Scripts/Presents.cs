@@ -33,6 +33,9 @@ public class Presents : MonoBehaviour {
     	if (GameManager.state == GameManager.STATE.PresentShow)
         {//プレゼントの紹介
             rawImage.texture = presentTexture[GameManager.presentIndex];
+            rect = this.GetComponent<RectTransform> ();
+            rect.sizeDelta = CalculateRectSize (presentTexture [GameManager.presentIndex].width, presentTexture [GameManager.presentIndex].height, max);
+
         }
     }
 
