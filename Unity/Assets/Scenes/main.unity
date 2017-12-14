@@ -174,6 +174,234 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &125323101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 125323102}
+  - component: {fileID: 125323104}
+  - component: {fileID: 125323103}
+  - component: {fileID: 125323105}
+  - component: {fileID: 125323106}
+  m_Layer: 5
+  m_Name: Howto_Paragraph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &125323102
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125323101}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 410, z: 0}
+  m_LocalScale: {x: 0.83939, y: 0.79999, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1433014622}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -398.5, y: 3.000122}
+  m_SizeDelta: {x: 1123, y: 254}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &125323103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125323101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 70
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'tttttttttttttttttttttttttttttttttttttttttttttttt
+
+    tttttttttttttttttttttttttttttttttttttttttttttttt'
+--- !u!222 &125323104
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125323101}
+--- !u!114 &125323105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125323101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b91132341bbeae4b91b9374ab5e8a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TimeSource: 0
+  _OnEnable_PlayAnim: 0
+  _AnimationSlots:
+  - _LocalSerializedData: "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<SE_Animation
+      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
+      Name=\"Custom\" _Playback=\"Single\" _Backwards=\"false\" _PlaybackTimes=\"-1\"
+      _ExtraTimeFinal=\"0\" _ExtraTimePerLoop=\"0\">\r\n  <_Sequences>\r\n    <SE_AnimSequence
+      xsi:type=\"SE_AnimSequence_Alpha\">\r\n      <_Name />\r\n      <_StartType>OnAnimStart</_StartType>\r\n
+      \     <_StartDelay>0</_StartDelay>\r\n      <_Separation>0.22</_Separation>\r\n
+      \     <_RandomStart>0</_RandomStart>\r\n      <_DurationType>PerElement</_DurationType>\r\n
+      \     <_Duration>0.5</_Duration>\r\n      <_DurationRandom_Slower>0</_DurationRandom_Slower>\r\n
+      \     <_DurationRandom_Faster>0</_DurationRandom_Faster>\r\n      <_Playback>Single</_Playback>\r\n
+      \     <_Backwards>false</_Backwards>\r\n      <_PlaybackTimes>1</_PlaybackTimes>\r\n
+      \     <_EasingCurve>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
+      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
+      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurve>\r\n
+      \     <_TargetType>Letters</_TargetType>\r\n      <_TargetRangeType>All</_TargetRangeType>\r\n
+      \     <_TargetRangeStart>0</_TargetRangeStart>\r\n      <_TargetRangeAmount>0</_TargetRangeAmount>\r\n
+      \     <_InitAllElements>true</_InitAllElements>\r\n      <_Enabled>true</_Enabled>\r\n
+      \     <_From>0</_From>\r\n      <_FromRandom>0</_FromRandom>\r\n      <_To>1</_To>\r\n
+      \     <_ToRandom>0</_ToRandom>\r\n      <_AnimBlend_From>Blend</_AnimBlend_From>\r\n
+      \     <_AnimBlend_To>Blend</_AnimBlend_To>\r\n      <_OnFinish_SetAlphaToFinalValue>true</_OnFinish_SetAlphaToFinalValue>\r\n
+      \   </SE_AnimSequence>\r\n    <SE_AnimSequence xsi:type=\"SE_AnimSequence_Position\">\r\n
+      \     <_Name />\r\n      <_StartType>OnAnimStart</_StartType>\r\n      <_StartDelay>0</_StartDelay>\r\n
+      \     <_Separation>0.22</_Separation>\r\n      <_RandomStart>0</_RandomStart>\r\n
+      \     <_DurationType>PerElement</_DurationType>\r\n      <_Duration>0.5</_Duration>\r\n
+      \     <_DurationRandom_Slower>0</_DurationRandom_Slower>\r\n      <_DurationRandom_Faster>0</_DurationRandom_Faster>\r\n
+      \     <_Playback>Single</_Playback>\r\n      <_Backwards>false</_Backwards>\r\n
+      \     <_PlaybackTimes>1</_PlaybackTimes>\r\n      <_EasingCurve>\r\n        <keys>\r\n
+      \         <Keyframe>\r\n            <time>0</time>\r\n            <value>0</value>\r\n
+      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>0.228156775</time>\r\n            <value>0.990923762</value>\r\n
+      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>0.5512305</time>\r\n            <value>-0.350667179</value>\r\n
+      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>0.819639</time>\r\n            <value>0.06735356</value>\r\n
+      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>0</value>\r\n            <inTangent>-0.09293859</inTangent>\r\n
+      \           <outTangent>-0.09293859</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurve>\r\n
+      \     <_TargetType>Letters</_TargetType>\r\n      <_TargetRangeType>All</_TargetRangeType>\r\n
+      \     <_TargetRangeStart>0</_TargetRangeStart>\r\n      <_TargetRangeAmount>0</_TargetRangeAmount>\r\n
+      \     <_InitAllElements>false</_InitAllElements>\r\n      <_Enabled>true</_Enabled>\r\n
+      \     <_From>\r\n        <x>0</x>\r\n        <y>0</y>\r\n        <z>0</z>\r\n
+      \     </_From>\r\n      <_To>\r\n        <x>0</x>\r\n        <y>1</y>\r\n        <z>0</z>\r\n
+      \     </_To>\r\n      <_FromRandom>\r\n        <x>0</x>\r\n        <y>0</y>\r\n
+      \       <z>0</z>\r\n      </_FromRandom>\r\n      <_ToRandom>\r\n        <x>0</x>\r\n
+      \       <y>0</y>\r\n        <z>0</z>\r\n      </_ToRandom>\r\n      <_AnimBlend_From>Offset</_AnimBlend_From>\r\n
+      \     <_AnimBlend_To>Offset</_AnimBlend_To>\r\n      <_ApplyX>true</_ApplyX>\r\n
+      \     <_ApplyY>true</_ApplyY>\r\n      <_ApplyZ>true</_ApplyZ>\r\n      <_UseAxisEasingCurves>false</_UseAxisEasingCurves>\r\n
+      \     <_EasingCurveY>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
+      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
+      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveY>\r\n
+      \     <_EasingCurveZ>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
+      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
+      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveZ>\r\n
+      \   </SE_AnimSequence>\r\n    <SE_AnimSequence xsi:type=\"SE_AnimSequence_Rotation\">\r\n
+      \     <_Name />\r\n      <_StartType>OnAnimStart</_StartType>\r\n      <_StartDelay>0</_StartDelay>\r\n
+      \     <_Separation>0.22</_Separation>\r\n      <_RandomStart>0</_RandomStart>\r\n
+      \     <_DurationType>PerElement</_DurationType>\r\n      <_Duration>0.5</_Duration>\r\n
+      \     <_DurationRandom_Slower>0</_DurationRandom_Slower>\r\n      <_DurationRandom_Faster>0</_DurationRandom_Faster>\r\n
+      \     <_Playback>Single</_Playback>\r\n      <_Backwards>false</_Backwards>\r\n
+      \     <_PlaybackTimes>1</_PlaybackTimes>\r\n      <_EasingCurve>\r\n        <keys>\r\n
+      \         <Keyframe>\r\n            <time>0</time>\r\n            <value>0</value>\r\n
+      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
+      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurve>\r\n
+      \     <_TargetType>Letters</_TargetType>\r\n      <_TargetRangeType>All</_TargetRangeType>\r\n
+      \     <_TargetRangeStart>0</_TargetRangeStart>\r\n      <_TargetRangeAmount>0</_TargetRangeAmount>\r\n
+      \     <_InitAllElements>true</_InitAllElements>\r\n      <_Enabled>true</_Enabled>\r\n
+      \     <_From>\r\n        <x>0</x>\r\n        <y>0</y>\r\n        <z>360</z>\r\n
+      \     </_From>\r\n      <_To>\r\n        <x>0</x>\r\n        <y>0</y>\r\n        <z>0</z>\r\n
+      \     </_To>\r\n      <_FromRandom>\r\n        <x>0</x>\r\n        <y>0</y>\r\n
+      \       <z>0</z>\r\n      </_FromRandom>\r\n      <_ToRandom>\r\n        <x>0</x>\r\n
+      \       <y>0</y>\r\n        <z>0</z>\r\n      </_ToRandom>\r\n      <_AnimBlend_From>Offset</_AnimBlend_From>\r\n
+      \     <_AnimBlend_To>Offset</_AnimBlend_To>\r\n      <_ApplyX>true</_ApplyX>\r\n
+      \     <_ApplyY>true</_ApplyY>\r\n      <_ApplyZ>true</_ApplyZ>\r\n      <_UseAxisEasingCurves>false</_UseAxisEasingCurves>\r\n
+      \     <_EasingCurveY>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
+      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
+      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveY>\r\n
+      \     <_EasingCurveZ>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
+      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
+      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveZ>\r\n
+      \     <_Pivot>\r\n        <x>0.5</x>\r\n        <y>0.5</y>\r\n        <z>0</z>\r\n
+      \     </_Pivot>\r\n      <_PivotType>Relative_Letter</_PivotType>\r\n    </SE_AnimSequence>\r\n
+      \ </_Sequences>\r\n</SE_Animation>"
+    _Preset: {fileID: 11400000, guid: 6c43d39a4da5cf6479d48b6f47af98ce, type: 2}
+  _OnAnimation_Finished:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: I2.TextAnimation.UnityEventSEAnimation, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &125323106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125323101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: 100
+  m_MinHeight: 100
+  m_PreferredWidth: 250
+  m_PreferredHeight: 250
+  m_FlexibleWidth: 1
+  m_FlexibleHeight: 1
+  m_LayoutPriority: 1
 --- !u!1 &162321725
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +718,7 @@ RectTransform:
   - {fileID: 162321726}
   - {fileID: 228997387}
   - {fileID: 1348436651}
+  - {fileID: 1433014622}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -514,7 +743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1348436651
 RectTransform:
   m_ObjectHideFlags: 0
@@ -522,16 +751,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348436650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -434, y: -8, z: 0}
-  m_LocalScale: {x: 4.300065, y: 26.875, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.83938533, y: 0.79998726, z: 1}
   m_Children: []
   m_Father: {fileID: 717810219}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -434, y: -8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348436652
 MonoBehaviour:
@@ -572,6 +801,63 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348436650}
+--- !u!1 &1433014621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1433014622}
+  - component: {fileID: 1433014623}
+  m_Layer: 5
+  m_Name: HowTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1433014622
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433014621}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.703789, y: 0.77500015, z: 1}
+  m_Children:
+  - {fileID: 125323102}
+  m_Father: {fileID: 717810219}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1433014623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433014621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1297475563, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 50
+    m_Right: 50
+    m_Top: 3
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
 --- !u!1 &1557352556
 GameObject:
   m_ObjectHideFlags: 0

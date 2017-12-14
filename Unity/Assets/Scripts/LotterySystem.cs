@@ -35,14 +35,13 @@ public class LotterySystem : MonoBehaviour {
         restrictionTime += Time.deltaTime;
 
         if (GameManager.state == GameManager.STATE.Lottery) {
-
             if (!showFlag) {
 				showNumbers = new GameObject[GameManager.luckyPersonNum[GameManager.presentIndex]];
 				lotteryText = new Text[GameManager.luckyPersonNum[GameManager.presentIndex]];
                 for (int i = 0; i < showNumbers.Length; i++) {
 					showNumbers [i] = Instantiate (lotteryNumberObject, this.transform) as GameObject;
 					lotteryText [i] = showNumbers [i].GetComponent<Text> ();
-					StartCoroutine(ShowNumber (i, 100 * i));
+					//StartCoroutine(ShowNumber (i, 100 * i));
 				}
 				showFlag = true;
 			}

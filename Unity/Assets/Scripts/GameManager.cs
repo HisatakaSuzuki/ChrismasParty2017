@@ -84,9 +84,11 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (state);
 		if (state == STATE.Howto)
 		{//ゲームの説明
-			state = STATE.PresentShow;
+			if (HowTo.shownParagraph >= HowTo.paragraphNum)
+				state = STATE.PresentShow;
 		}
 		else if (state == STATE.PresentShow)
 		{//プレゼントの紹介

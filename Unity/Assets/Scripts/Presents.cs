@@ -10,10 +10,8 @@ public class Presents : MonoBehaviour {
 	RectTransform rect;
 	Color color;
 
-	bool alphaFlag;
-
+	bool showFlag;
 	float ratio;
-	int i = 0;
 	public float max = 600.0f;
 	// Use this for initialization
 	void Start () {
@@ -24,17 +22,31 @@ public class Presents : MonoBehaviour {
 //		color = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, .0f);
 //		rawImage.color = color;
 //
-		alphaFlag = false;
+		showFlag = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-    	if (GameManager.state == GameManager.STATE.PresentShow)
-        {//プレゼントの紹介
-            rawImage.texture = presentTexture[GameManager.presentIndex];
-        }
+		if (GameManager.state == GameManager.STATE.PresentShow) {//プレゼントの紹介
+			rawImage.texture = presentTexture [GameManager.presentIndex];
+			if (!showFlag) {
+				StartCoroutine (ShowImage ());
+				showFlag = true;
+			}
+		}
     }
+
+	IEnumerator ShowImage(){
+		for (; ; ) {
+			yield return new WaitForSeconds (0.01f);
+			Color c = new Color (.0f, .0f, .0f, rawImage.color.a + 0.01f);
+			rawImage.color = c;
+			if (rawImage.color.a >= 0.95f) {
+				break;
+			}
+		}
+	}
 
     Vector2 CalculateRectSize(float w, float h, float m){
 		Vector2 output;
