@@ -19,19 +19,24 @@ public class LotterySystem : MonoBehaviour {
 	bool showFlag;
 
 	float[] endTimes = new float[8]{
-		0.3f,0.32f,0.34f,0.36f,0.38f,0.4f,0.42f,0.44f
-	};
+		//0.3f,0.32f,0.34f,0.36f,0.38f,0.4f,0.42f,0.44f
+        0.4f,0.48f,0.56f,0.64f,0.72f,0.8f,0.88f,0.96f
+    };
     float restrictionTime = 0.0f;
 
     private int lotteryCount = 0;
 
+    public AudioClip[] effect;
+    AudioSource audioSource;
+
     // Use this for initialization
     void Start () {
 		showFlag = false;
+        audioSource = this.gameObject.GetComponent<AudioSource>();
     }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         restrictionTime += Time.deltaTime;
 
         if (GameManager.state == GameManager.STATE.Lottery) {
@@ -48,6 +53,8 @@ public class LotterySystem : MonoBehaviour {
 			}
             if (Input.GetKeyDown(KeyCode.R) && restrictionTime > 2.0f) {
                 restrictionTime = 0.0f;
+                audioSource.clip = effect[0];
+                audioSource.Play();
                 for (int i = 0; i < showNumbers.Length; i++) {
 					StartCoroutine(Lottery(i,endTimes[i]));
 				}
@@ -87,7 +94,9 @@ public class LotterySystem : MonoBehaviour {
 				if (time > endtime)
 				{
 					lotteryText[i].text = GameManager.winnersNumberList[lotteryCount].ToString();
-					break;
+                    audioSource.clip = effect[1];
+                    audioSource.Play();
+                    break;
 				}
 			}
             lotteryCount++;

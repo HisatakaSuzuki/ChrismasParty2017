@@ -199,7 +199,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 162321725}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -529, y: 149, z: 0}
+  m_LocalPosition: {x: -413.00003, y: 82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 717810219}
@@ -207,7 +207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -529, y: 149}
+  m_AnchoredPosition: {x: -413, y: 82}
   m_SizeDelta: {x: 326.8, y: 255.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162321727
@@ -224,9 +224,9 @@ MonoBehaviour:
   presentTexture:
   - {fileID: 2800000, guid: 5ebac03fb70a2e94cba4c61dff79e54b, type: 3}
   - {fileID: 2800000, guid: b06827b6520b45b49a3eb667e8f410ae, type: 3}
-  - {fileID: 2800000, guid: a481245a0c92a5c40b7b0d3a94bc434d, type: 3}
+  - {fileID: 2800000, guid: 38c9b3d398e9efa4498947f133811b72, type: 3}
   - {fileID: 2800000, guid: da4e044c540887d4a92cbcad78d9a31d, type: 3}
-  - {fileID: 2800000, guid: a481245a0c92a5c40b7b0d3a94bc434d, type: 3}
+  - {fileID: 2800000, guid: f2c4976952d633446ba9c721397a538b, type: 3}
   - {fileID: 2800000, guid: 0c154065c00349e47af184c04ebb2243, type: 3}
   - {fileID: 2800000, guid: 5ab1732e2e9cc5e42a56ff5fbdde71c1, type: 3}
   - {fileID: 2800000, guid: 1fb62ce7cd0bee740bf84f5b7a5bfe85, type: 3}
@@ -373,7 +373,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -589,7 +589,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 717810215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 339, y: 185, z: 0}
+  m_LocalPosition: {x: 339, y: 181, z: 0}
   m_LocalScale: {x: 0.353125, y: 0.353125, z: 0.353125}
   m_Children:
   - {fileID: 2130005894}
@@ -706,7 +706,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -786,7 +786,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a92066e08a24a148b1166c7749c1d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm: []
+  bgm:
+  - {fileID: 8300000, guid: 2159f70038dffdd4ea194af7dae32b7d, type: 3}
+  - {fileID: 8300000, guid: 2c08677e48ce88a48856ea904bfe5045, type: 3}
+  - {fileID: 8300000, guid: 2b50f24241084c74ab9ae4098c7939bc, type: 3}
+  - {fileID: 8300000, guid: 2681ab7e7b0141546b4e4330e3a24922, type: 3}
+  - {fileID: 8300000, guid: d575c27cba995e64282c7a8eca3a68af, type: 3}
+  - {fileID: 8300000, guid: 72b6f1c6e176b9146be51f293de5257d, type: 3}
+  - {fileID: 8300000, guid: e7a713949192ba0448522840283d3c2c, type: 3}
+  - {fileID: 8300000, guid: 9f489ae545cabd448bf8180ae55d1ece, type: 3}
+  - {fileID: 8300000, guid: af5e732468a89064e8b0cce5f509e0c3, type: 3}
+  - {fileID: 8300000, guid: 15a4695a7578f2248ac1252a8039834b, type: 3}
+  - {fileID: 8300000, guid: e6605f90cfa4549439131a7b81f3d4e4, type: 3}
+  - {fileID: 8300000, guid: e4dd29aa4612efb41a6cae778b2357f9, type: 3}
+  - {fileID: 8300000, guid: 7be5ffe7f0b027945866c901de729bb4, type: 3}
+  - {fileID: 8300000, guid: 45c3a0afa8fe2d54494bc8cc4c2781dd, type: 3}
+  - {fileID: 8300000, guid: 333f47081d7db4f4999423bcc946c347, type: 3}
+  - {fileID: 8300000, guid: 77ed5829d11c565419f48644fd341e66, type: 3}
+  - {fileID: 8300000, guid: c5ef13a57383c5c4b8a0b7405503c689, type: 3}
+  - {fileID: 8300000, guid: 49a82cf7eeee9044396f555d0ba5068e, type: 3}
+  - {fileID: 8300000, guid: a65bbaac8f59af546817ecab746da51f, type: 3}
+  - {fileID: 8300000, guid: e3c2de9014aa99c498e81e7d20c97a48, type: 3}
+  - {fileID: 8300000, guid: 2c307d68d7bc39f459fa9653a6ec9b57, type: 3}
+  - {fileID: 8300000, guid: 9df9b4a02ea524a4691891718648d7be, type: 3}
+  - {fileID: 8300000, guid: 71a0e251e42212e4e8632752733c1605, type: 3}
+  - {fileID: 8300000, guid: cdc926405d2178e44bf9fd92cae2a98f, type: 3}
+  - {fileID: 8300000, guid: 3f565e4b3a243484e934e9380315cca6, type: 3}
+  - {fileID: 8300000, guid: 32e67ef4c730c9b44a55d270780b606a, type: 3}
+  - {fileID: 8300000, guid: 33e2ae9ac7175db43b2d2420b650ccea, type: 3}
+  - {fileID: 8300000, guid: 50c3e7ccbe2218f4083c5fa87ffa129f, type: 3}
+  - {fileID: 8300000, guid: 7579ed25a263b524c8261ec9002ff41d, type: 3}
+  - {fileID: 8300000, guid: ae6358887ee08484595e7398f6310c57, type: 3}
+  - {fileID: 8300000, guid: edcb97c91a214de47acd381bc4c2cffd, type: 3}
   test: {fileID: 1348436652}
   lotterySystem: {fileID: 228997386}
 --- !u!4 &1557352559

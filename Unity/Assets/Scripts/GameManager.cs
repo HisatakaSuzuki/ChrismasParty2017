@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
 
 	public AudioClip[] bgm;
 	AudioSource audioSource;
+    int bgmNum = 0;
 
 	const int presentNum = 30;
 
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour {
     static public int max = 0;
     static public int[] winnersNumberList;
 
-    static public int[] luckyPersonNum = { 8,3,1,1,1,1,1,1,2,1,1,
+    static public int[] luckyPersonNum = { 1,1,1,1,1,1,2,1,1,1,1,
                                            1,1,1,1,1,1,1,1,1,
                                            1,1,1,1,1,1,1,1,1,1,1
                                          };
@@ -77,14 +78,28 @@ public class GameManager : MonoBehaviour {
         //}
 
         GameManager.state = GameManager.STATE.Howto;
-		//audioSource = this.gameObject.GetComponent<AudioSource>();
-		//audioSource.clip = bgm[0];
-		//audioSource.Play();
-	}
+        audioSource = this.gameObject.GetComponent<AudioSource>();
+        audioSource.clip = bgm[bgmNum];
+        audioSource.Play();
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		if (state == STATE.Howto)
+        if ((audioSource.time + Time.deltaTime) > audioSource.clip.length)
+        {
+            if (bgmNum >= 30)
+            {
+                bgmNum = 0;
+            }
+            else
+            {
+                bgmNum++;
+            }
+            audioSource.clip = bgm[bgmNum];
+            audioSource.Play();
+        }
+        
+        if (state == STATE.Howto)
 		{//ゲームの説明
 			state = STATE.PresentShow;
 		}
