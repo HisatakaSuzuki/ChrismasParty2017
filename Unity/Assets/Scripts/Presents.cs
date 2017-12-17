@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class Presents : MonoBehaviour {
 	public Texture2D[] presentTexture;
+    public GameObject commentObj; //Comment用のオブジェクト
 
-	RawImage rawImage;
+    RawImage rawImage;
 	RectTransform rect;
 	Color color;
 
@@ -45,14 +46,21 @@ public class Presents : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if (GameManager.state == GameManager.STATE.PresentShow) {//プレゼントの紹介
+        if (GameManager.state == GameManager.STATE.Howto)
+        {
+            commentObj.GetComponent<Text>().text = "";
+        }
+
+        if (GameManager.state == GameManager.STATE.PresentShow) {//プレゼントの紹介
 			if (showFlag) {
 				showFlag = false;
 				Color prev = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, 0.0f);
 				rect.localPosition = originalPosition;
 				rawImage.color = prev;
 			}
-			rawImage.texture = presentTexture [GameManager.presentIndex];
+
+            commentObj.GetComponent<Text>().text = comments[GameManager.presentIndex];
+            rawImage.texture = presentTexture [GameManager.presentIndex];
 			rect = this.GetComponent<RectTransform> ();
 			rect.sizeDelta = CalculateRectSize (presentTexture [GameManager.presentIndex].width, presentTexture [GameManager.presentIndex].height, max);
 			if (!showFlag) {
