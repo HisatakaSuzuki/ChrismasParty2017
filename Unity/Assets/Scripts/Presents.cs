@@ -13,6 +13,10 @@ public class Presents : MonoBehaviour {
 	bool showFlag;
 	float ratio;
 	public float max = 600.0f;
+
+	public Vector3 originalPosition;
+	public Vector3 movedPosition;
+
 	// Use this for initialization
 	void Start () {
 		rawImage = this.GetComponent<RawImage> ();
@@ -28,17 +32,54 @@ public class Presents : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-    	if (GameManager.state == GameManager.STATE.PresentShow)
-        {//プレゼントの紹介
-            rawImage.texture = presentTexture[GameManager.presentIndex];
-            rect = this.GetComponent<RectTransform> ();
-            rect.sizeDelta = CalculateRectSize (presentTexture [GameManager.presentIndex].width, presentTexture [GameManager.presentIndex].height, max);
+		if (GameManager.state == GameManager.STATE.PresentShow) {//プレゼントの紹介
+			if (showFlag) {
+				showFlag = false;
+				Color prev = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, 0.0f);
+				rect.localPosition = originalPosition;
+				rawImage.color = prev;
+			}
+			rawImage.texture = presentTexture [GameManager.presentIndex];
+			rect = this.GetComponent<RectTransform> ();
+			rect.sizeDelta = CalculateRectSize (presentTexture [GameManager.presentIndex].width, presentTexture [GameManager.presentIndex].height, max);
 			if (!showFlag) {
 				StartCoroutine (ShowImage ());
 				showFlag = true;
 			}
-        }
+
+			if (Input.GetKeyDown (KeyCode.A)) {
+				Debug.Log ("StartCoroutine");
+				StartCoroutine (ImageMove ());
+			}
+		} else if (GameManager.state == GameManager.STATE.PresentShow) {
+			if (Input.GetKeyDown (KeyCode.A)) {
+				Debug.Log ("PrevData Change");
+
+			}
+		}
     }
+
+
+	IEnumerator ImageMove(){
+		Vector3 originScale = rect.localScale;
+		Vector3 zero = new Vector3 (0.0f, 0.0f, 0.0f);
+
+		for(;;){
+			if (rect.localScale == zero)
+				break;
+			Vector3 updateScale = rect.localScale - new Vector3 (0.1f, 0.1f, 0.1f);
+			rect.localScale = updateScale;
+			yield return new WaitForSeconds (0.01f);
+		}
+			
+		rect.localPosition = movedPosition;
+		while (!rect.localScale.Equals(originScale)) {
+			Vector3 updateScale = rect.localScale + new Vector3 (0.1f, 0.1f, 0.1f);
+			rect.localScale = updateScale;
+			Debug.Log ("back:" + rect.localScale);
+			yield return new WaitForSeconds (0.01f);
+		}	
+	}
 
 	IEnumerator ShowImage(){
 		for (; ; ) {
