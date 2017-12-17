@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
 	AudioSource audioSource;
     int bgmNum = 0;
 
-	const int presentNum = 30;
+	static public int presentNum = 30;
 
 	static public int presentIndex = 0;
 	static int luckyPresonIndex = -1;
@@ -29,25 +29,29 @@ public class GameManager : MonoBehaviour {
     static public int max = 0;
     static public int[] winnersNumberList;
 
-    static public int[] luckyPersonNum = { 1,5,1,8,2,1,2,1,1,1,1,
-                                           1,1,1,1,1,1,1,1,1,
-                                           1,1,1,1,1,1,1,1,1,1,1
-                                         };
+    static public List<int> luckyPersonNum = new List<int>();
 
 	public GameObject lotterySystem;
 
     // Use this for initialization
-    void Start () {
-		//当選番号配列の準備
-		using (StreamReader sr = new StreamReader("num.txt"))
-		{
-			while (!sr.EndOfStream)
-			{
-				var tmp = sr.ReadLine();
-					max = int.Parse(tmp);
-			}
-		}
+    void Awake () {
+        //当選番号配列の準備
 
+        using (StreamReader sr = new StreamReader("config.txt"))
+		{
+            int count = 0;
+            while (!sr.EndOfStream)
+            {
+                var tmp = sr.ReadLine();
+                if (count == 0)
+                {
+                    max = int.Parse(tmp);
+                }
+                else presentNum = int.Parse(tmp);
+                count++;
+            }
+		}
+ 
         winnersNumberList = new int[max];
         for (int i = 0; i < max; i++)
         {
@@ -138,4 +142,6 @@ public class GameManager : MonoBehaviour {
 			GameManager.state = GameManager.STATE.End;
 		}
 	}
+
+
 }
