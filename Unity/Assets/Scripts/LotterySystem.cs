@@ -59,8 +59,20 @@ public class LotterySystem : MonoBehaviour {
 			}
             if (Input.GetKeyDown(KeyCode.R) && restrictionTime > 2.0f) {
                 restrictionTime = 0.0f;
-                audioSource.clip = effect[0];
-                audioSource.Play();
+                bool allAtariFlag = true;
+                for(int j = 0; j < showNumbers.Length; j++)
+                {
+                    if (!showNumbers[j].GetComponent<LotteryNumber>().isAtari)
+                    {
+                        allAtariFlag = false;
+                    }
+                }
+
+                if (!allAtariFlag)
+                {
+                    audioSource.clip = effect[0];
+                    audioSource.Play();
+                }
                 for (int i = 0; i < showNumbers.Length; i++) {
 					StartCoroutine(Lottery(i,endTimes[i]));
 				}
