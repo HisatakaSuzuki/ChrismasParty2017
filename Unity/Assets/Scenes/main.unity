@@ -509,6 +509,152 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &378869630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 378869631}
+  - component: {fileID: 378869634}
+  - component: {fileID: 378869633}
+  - component: {fileID: 378869632}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &378869631
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378869630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 717810219}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -320, y: -280}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &378869632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378869630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b91132341bbeae4b91b9374ab5e8a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TimeSource: 0
+  _OnEnable_PlayAnim: 0
+  _AnimationSlots:
+  - _LocalSerializedData: "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<SE_Animation
+      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
+      Name=\"Custom\" _Playback=\"Loop\" _Backwards=\"false\" _PlaybackTimes=\"-1\"
+      _ExtraTimeFinal=\"0\" _ExtraTimePerLoop=\"0\">\r\n  <_Sequences>\r\n    <SE_AnimSequence
+      xsi:type=\"SE_AnimSequence_Position\">\r\n      <_Name />\r\n      <_StartType>OnAnimStart</_StartType>\r\n
+      \     <_StartDelay>0</_StartDelay>\r\n      <_Separation>0.08</_Separation>\r\n
+      \     <_RandomStart>1</_RandomStart>\r\n      <_DurationType>PerElement</_DurationType>\r\n
+      \     <_Duration>1</_Duration>\r\n      <_DurationRandom_Slower>0</_DurationRandom_Slower>\r\n
+      \     <_DurationRandom_Faster>0</_DurationRandom_Faster>\r\n      <_Playback>Single</_Playback>\r\n
+      \     <_Backwards>false</_Backwards>\r\n      <_PlaybackTimes>1</_PlaybackTimes>\r\n
+      \     <_EasingCurve>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
+      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>0.1401825</time>\r\n            <value>0.414783657</value>\r\n
+      \           <inTangent>3.93638372</inTangent>\r\n            <outTangent>3.93638372</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>0.4948707</time>\r\n            <value>0.7814759</value>\r\n
+      \           <inTangent>0.00085094996</inTangent>\r\n            <outTangent>0.00085094996</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>0.8549469</time>\r\n            <value>0.3490098</value>\r\n
+      \           <inTangent>-3.76231122</inTangent>\r\n            <outTangent>-3.76231122</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>0</value>\r\n            <inTangent>0</inTangent>\r\n
+      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurve>\r\n
+      \     <_TargetType>Letters</_TargetType>\r\n      <_TargetRangeType>All</_TargetRangeType>\r\n
+      \     <_TargetRangeStart>0</_TargetRangeStart>\r\n      <_TargetRangeAmount>0</_TargetRangeAmount>\r\n
+      \     <_InitAllElements>false</_InitAllElements>\r\n      <_Enabled>true</_Enabled>\r\n
+      \     <_From>\r\n        <x>0</x>\r\n        <y>0</y>\r\n        <z>0</z>\r\n
+      \     </_From>\r\n      <_To>\r\n        <x>0</x>\r\n        <y>1</y>\r\n        <z>0</z>\r\n
+      \     </_To>\r\n      <_FromRandom>\r\n        <x>0</x>\r\n        <y>0</y>\r\n
+      \       <z>0</z>\r\n      </_FromRandom>\r\n      <_ToRandom>\r\n        <x>0</x>\r\n
+      \       <y>2</y>\r\n        <z>0</z>\r\n      </_ToRandom>\r\n      <_AnimBlend_From>Offset</_AnimBlend_From>\r\n
+      \     <_AnimBlend_To>Offset</_AnimBlend_To>\r\n      <_ApplyX>true</_ApplyX>\r\n
+      \     <_ApplyY>true</_ApplyY>\r\n      <_ApplyZ>true</_ApplyZ>\r\n      <_UseAxisEasingCurves>false</_UseAxisEasingCurves>\r\n
+      \     <_EasingCurveY>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
+      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
+      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveY>\r\n
+      \     <_EasingCurveZ>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
+      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
+      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
+      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
+      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
+      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
+      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveZ>\r\n
+      \   </SE_AnimSequence>\r\n  </_Sequences>\r\n</SE_Animation>"
+    _Preset: {fileID: 11400000, guid: f43c5f989c7699743b2ad0eced3de6cc, type: 2}
+  _OnAnimation_Finished:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: I2.TextAnimation.UnityEventSEAnimation, Assembly-CSharp-firstpass,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &378869633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378869630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 150
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 150
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: SIE X'Mas Party 2017
+--- !u!222 &378869634
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378869630}
 --- !u!1 &653503738
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +820,7 @@ RectTransform:
   - {fileID: 1348436651}
   - {fileID: 1433014622}
   - {fileID: 653503739}
+  - {fileID: 378869631}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -803,8 +950,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 50
-    m_Right: 50
+    m_Left: 20
+    m_Right: 20
     m_Top: 3
     m_Bottom: 0
   m_ChildAlignment: 1
@@ -825,17 +972,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paragraph: {fileID: 1292648322234074, guid: 640d46eae6218174594534399355f8c9, type: 2}
+  title: {fileID: 378869630}
   phrases:
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemptemptemptemp
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
-  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - "SIE X'mas Party 2017 \u30D7\u30EC\u30BC\u30F3\u30C8\u62BD\u9078\u4F1A\u3078\u3088\u3046\u3053\u305D\uFF01"
+  - "\u3053\u306E\u62BD\u9078\u4F1A\u306E\u30EB\u30FC\u30EB\u8AAC\u660E\u3092\u3057\u307E\u3059\u3002"
+  - "\u7686\u3055\u3093\u306B\u306F\u5165\u5834\u306E\u969B\u306B\u53D7\u4ED8\u3067\u62BD\u9078\u5238\u3092\u914D\u3063\u3066\u304A\u308A\u307E\u3057\u305F\u3002"
+  - "\u3053\u308C\u304B\u3089\u30D7\u30EC\u30BC\u30F3\u30C8\u306E\u6570\u3060\u3051\u62BD\u9078\u3057\u3066\u3044\u304D\u307E\u3059\u306E\u3067\u3001\u304A\u624B\u6301\u3061\u306E\u756A\u53F7\u3068\u540C\u3058\u6570\u5B57\u304C\u3067\u308B\u304B\u30C1\u30A7\u30C3\u30AF\u3057\u3066\u304A\u3044\u3066\u304F\u3060\u3055\u3044\u3002"
+  - "\u6301\u3063\u3066\u3044\u305F\u756A\u53F7\u304C\u51FA\u305F\u3068\u3044\u3046\u30E9\u30C3\u30AD\u30FC\u306A\u65B9\u306B\u306F\u8C6A\u83EF\u30D7\u30EC\u30BC\u30F3\u30C8\u3092\u5DEE\u3057\u4E0A\u3052\u307E\u3059\uFF01\uFF01"
+  - "\u30D7\u30EC\u30BC\u30F3\u30C8\u3092\u304A\u6E21\u3057\u3059\u308B\u3068\u304D\u306B\u3001\u5F53\u9078\u3057\u305F\u62BD\u9078\u5238\u3068\u306E\u5F15\u304D\u63DB\u3048\u306B\u306A\u308A\u307E\u3059\u306E\u3067\u3001\u306A\u304F\u3055\u306A\u3044\u3088\u3046\u306B\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+  - "\u307E\u305F\u3001\u4ECA\u5E74\u306F\u30D7\u30EC\u30BC\u30F3\u30C8\u4EA4\u63DB\u6240\u30921F\u306E\u30ED\u30D3\u30FC\u306B\u8A2D\u3051\u3066\u3044\u307E\u3059\u3002"
+  - "\u306A\u306E\u3067\u3001\u5F53\u9078\u3057\u305F\u5F8C\u3082\u30D1\u30FC\u30C6\u30A3\u3092\u7D42\u6F14\u6642\u9593\u307E\u3067\u697D\u3057\u3093\u3067\u3044\u305F\u3060\u304D\u3001\u5E30\u308A\u304C\u3051\u306E\u4EA4\u63DB\u3082\u3067\u304D\u307E\u3059\u3002"
+  - "\u4E00\u3064\u3001\u6CE8\u610F\u70B9\u304C\u3042\u308A\u307E\u3059\u3002\u4F1A\u5834\u306F\u4EBA\u304C\u591A\u3044\u306E\u3067\u3001\u7686\u3055\u3093\u304C\u5F53\u9078\u3057\u305F\u3053\u3068\u306B\u53F8\u4F1A\u304C\u6C17\u3065\u3051\u306A\u3044\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002"
+  - "\u306A\u306E\u3067\u3001\u5F53\u9078\u3057\u305F\u3068\u304D\u306F\u5927\u304D\u306A\u58F0\u3067\u5F53\u9078\u756A\u53F7\u3092\u30A2\u30D4\u30FC\u30EB\u3057\u3066\u3044\u305F\u3060\u3051\u308B\u3068\u52A9\u304B\u308A\u307E\u3059\u3002"
 --- !u!1 &1557352556
 GameObject:
   m_ObjectHideFlags: 0

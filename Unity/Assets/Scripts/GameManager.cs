@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour {
         
 		if (state == STATE.Howto)
 		{//ゲームの説明
-			if (HowTo.shownParagraph >= HowTo.paragraphNum)
+			if (HowTo.shownParagraph > HowTo.paragraphNum)
 				state = STATE.PresentShow;
 		}
 		else if (state == STATE.PresentShow)

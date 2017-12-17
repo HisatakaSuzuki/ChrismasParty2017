@@ -12,8 +12,10 @@ public class HowTo : MonoBehaviour {
 	TextAnimation[] textAnimation;
 
 	public static int shownParagraph;
+	public GameObject title;
+	public string[] phrases = new string[paragraphNum];
 
-	public string[] phrases = new string[paragraphNum]; 
+	bool isTitle = true;
 
 	// Use this for initialization
 	void Start () {
@@ -30,10 +32,22 @@ public class HowTo : MonoBehaviour {
 	void Update () {
 		if (GameManager.state == GameManager.STATE.Howto) {
 			if (Input.GetKeyDown (KeyCode.A)) {
-				paragraphObject [shownParagraph].GetComponent<Text> ().text = phrases [shownParagraph];
-				textAnimation [shownParagraph].PlayAnim (0);
-				shownParagraph++;
+				if (isTitle) {
+					Destroy (title);
+					isTitle = false;
+					paragraphObject [shownParagraph].GetComponent<Text> ().text = phrases [shownParagraph];
+					textAnimation [shownParagraph].PlayAnim (0);
+					shownParagraph++;
+				} 
+				else {
+					if (shownParagraph < paragraphNum) {
+						paragraphObject [shownParagraph].GetComponent<Text> ().text = phrases [shownParagraph];
+						textAnimation [shownParagraph].PlayAnim (0);
+					}
+					shownParagraph++;
+				}
 			}
+			
 		} else if (GameManager.state == GameManager.STATE.PresentShow) {
 			if (shownParagraph >= paragraphNum) {
 				foreach (var obj in paragraphObject)

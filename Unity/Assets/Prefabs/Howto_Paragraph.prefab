@@ -201,10 +201,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 70
+    m_MinSize: 50
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -227,7 +227,7 @@ RectTransform:
   m_GameObject: {fileID: 1292648322234074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -398.5, y: 3.000122, z: 0}
-  m_LocalScale: {x: 0.83939, y: 0.79999, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
