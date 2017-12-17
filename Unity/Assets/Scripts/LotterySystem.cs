@@ -78,12 +78,12 @@ public class LotterySystem : MonoBehaviour {
 
 	IEnumerator ShowNumber(int i, float distY){
 		for (; ; ) {
-			yield return new WaitForSeconds (0.01f);
 			Color c = new Color (.0f, .0f, .0f, lotteryText[i].color.a + 0.01f);
 			lotteryText[i].color = c;
 			if (lotteryText[i].color.a >= 0.8f) {
 				break;
 			}
+			yield return new WaitForSeconds (0.01f);
 		}
 	}
 
@@ -93,7 +93,6 @@ public class LotterySystem : MonoBehaviour {
 			float time = 0.0f;
 			for (; ; )
 			{
-				yield return new WaitForSeconds(sleepTime);
 				//showNumbers[i].GetComponent<Text>().text = GameManager.aList[lotteryCount].ToString();
 				lotteryText[i].text = Random.Range(1,601).ToString();//あとで1~maxまでに変更する
 				time += Time.deltaTime;
@@ -104,6 +103,7 @@ public class LotterySystem : MonoBehaviour {
                     audioSource.Play();
                     break;
 				}
+				yield return new WaitForSeconds(sleepTime);
 			}
             lotteryCount++;
         }

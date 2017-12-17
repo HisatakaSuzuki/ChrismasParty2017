@@ -42,12 +42,12 @@ public class Presents : MonoBehaviour {
 
 	IEnumerator ShowImage(){
 		for (; ; ) {
-			yield return new WaitForSeconds (0.01f);
 			Color c = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, rawImage.color.a + 0.01f);
 			rawImage.color = c;
 			if (rawImage.color.a >= 0.95f) {
 				break;
 			}
+			yield return new WaitForSeconds (0.01f);
 		}
 	}
 

@@ -25,7 +25,9 @@ public class LotteryNumber : MonoBehaviour{
 	float restrictionTime = 0.0f;
 
 	bool isMouseEnter;
+	bool isHoverAnimation;
 
+	Coroutine coroutine;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +37,7 @@ public class LotteryNumber : MonoBehaviour{
 		isMouseEnter = false;
 		rectTransform = this.gameObject.GetComponent<RectTransform> ();
 		textOutline = this.gameObject.GetComponent<Outline> ();
+		isHoverAnimation = false;
 	//	objectName = this.gameObject.name;
 	}
 	
@@ -55,15 +58,24 @@ public class LotteryNumber : MonoBehaviour{
 		isMouseEnter = isMouseOver ();
 
 		if (isMouseEnter && rectTransform.localScale.x == 1.0f) {
-			StartCoroutine (HoverAnimation (true,hoverColor));
+			if (coroutine != null) {
+				Debug.Log (coroutine);
+				StopCoroutine (coroutine);
+			}
+			Debug.Log ("MouseEnter");
+			coroutine = StartCoroutine (HoverAnimation (true,hoverColor));
 		}
-		if (!isMouseEnter && rectTransform.localScale.x != 1.0f) {
-			StartCoroutine (HoverAnimation (false,text.color));
+		if (!isMouseEnter && rectTransform.localScale.x == 1.15f) {
+			if (coroutine != null) {
+				Debug.Log (coroutine);
+				StopCoroutine (coroutine);
+			}
+				
+			Debug.Log ("MouseExit");
+			coroutine = StartCoroutine (HoverAnimation (false,text.color));
 		}
 
 		SelectNumber ();
-
-
 	}
 
 	bool isMouseOver(){
@@ -95,7 +107,6 @@ public class LotteryNumber : MonoBehaviour{
 
 	IEnumerator ChangeColor(Color c){
 		for (;;) {
-			yield return new WaitForSeconds (waitTime);
 			Color src = text.color;
 			Color result = Color.Lerp (src, c, Mathf.PingPong (Time.time, 1));
 			text.color = result;
@@ -103,12 +114,12 @@ public class LotteryNumber : MonoBehaviour{
 			if (Vector4.Distance (result, c) == 0) {
 				break;
 			}
+			yield return new WaitForSeconds (waitTime);
 		}
 	}
 
 	IEnumerator HoverAnimation(bool isEnter, Color outline){
 		for (;;) {
-			yield return new WaitForSeconds (waitTime);
 			Vector3 scale = rectTransform.localScale;
 			float dist = (isEnter) ? 1.15f : 1.0f;
 			Vector3 updateScale = new Vector3 (Mathf.Lerp (scale.x, dist, Mathf.PingPong (Time.time, 1)),
@@ -124,7 +135,7 @@ public class LotteryNumber : MonoBehaviour{
 			if (Vector3.Distance (updateScale, scale) == 0 && Vector4.Distance(result,outline) == 0) {
 				break;
 			}
-
+			yield return new WaitForSeconds (waitTime);
 		}
 	}
 
