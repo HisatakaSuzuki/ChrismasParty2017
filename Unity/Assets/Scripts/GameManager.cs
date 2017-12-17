@@ -112,6 +112,9 @@ public class GameManager : MonoBehaviour {
 		{//プレゼントの紹介
 			if(Input.GetKeyDown(KeyCode.A))
 			{
+				//ここでプレゼントアニメーション
+
+
 				state = STATE.Lottery;
 			}
 		}

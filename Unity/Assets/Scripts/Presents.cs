@@ -14,13 +14,14 @@ public class Presents : MonoBehaviour {
 	bool showFlag;
 	float ratio;
 	public float max = 600.0f;
+    public Vector3 originalPosition;
+    public Vector3 movedPosition;
 
     List<string> comments = new List<string>();
 
     // Use this for initialization
-    void Start () {
-        string path = "";
-
+    void Start()
+    {
         using (StreamReader sr = new StreamReader("presentinfo.csv"))
         {
             int presentCount = 0;
@@ -28,36 +29,70 @@ public class Presents : MonoBehaviour {
             {
                 var tmp = sr.ReadLine();
                 string[] data = tmp.Split(',');
-                Debug.Log(data[0]);
-                Debug.Log(data[1]);
-                Debug.Log(data[2]);
-                presentTexture[presentCount] = ReadTexture(Application.dataPath+"/Textures/Presents/17F_Present/"  + data[0], 600, 600); //パスからtextureの読み込み
+                presentTexture[presentCount] = ReadTexture(Application.dataPath + "/Textures/Presents/17F_Present/" + data[0], 600, 600); //パスからtextureの読み込み
                 GameManager.luckyPersonNum.Add(int.Parse(data[1])); //貰える人数
                 comments.Add(data[2]); //コメント
                 presentCount++;
             }
-         }
+        }
 
         rawImage = this.GetComponent<RawImage>();
         rawImage.texture = presentTexture[0];
 
         showFlag = false;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-    	if (GameManager.state == GameManager.STATE.PresentShow)
-        {//プレゼントの紹介
-            rawImage.texture = presentTexture[GameManager.presentIndex];
-            rect = this.GetComponent<RectTransform> ();
-            rect.sizeDelta = CalculateRectSize (presentTexture [GameManager.presentIndex].width, presentTexture [GameManager.presentIndex].height, max);
+		if (GameManager.state == GameManager.STATE.PresentShow) {//プレゼントの紹介
+			if (showFlag) {
+				showFlag = false;
+				Color prev = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, 0.0f);
+				rect.localPosition = originalPosition;
+				rawImage.color = prev;
+			}
+			rawImage.texture = presentTexture [GameManager.presentIndex];
+			rect = this.GetComponent<RectTransform> ();
+			rect.sizeDelta = CalculateRectSize (presentTexture [GameManager.presentIndex].width, presentTexture [GameManager.presentIndex].height, max);
 			if (!showFlag) {
 				StartCoroutine (ShowImage ());
 				showFlag = true;
 			}
-        }
+
+			if (Input.GetKeyDown (KeyCode.A)) {
+				Debug.Log ("StartCoroutine");
+				StartCoroutine (ImageMove ());
+			}
+		} else if (GameManager.state == GameManager.STATE.PresentShow) {
+			if (Input.GetKeyDown (KeyCode.A)) {
+				Debug.Log ("PrevData Change");
+
+			}
+		}
     }
+
+
+	IEnumerator ImageMove(){
+		Vector3 originScale = rect.localScale;
+		Vector3 zero = new Vector3 (0.0f, 0.0f, 0.0f);
+
+		for(;;){
+			if (rect.localScale == zero)
+				break;
+			Vector3 updateScale = rect.localScale - new Vector3 (0.1f, 0.1f, 0.1f);
+			rect.localScale = updateScale;
+			yield return new WaitForSeconds (0.01f);
+		}
+			
+		rect.localPosition = movedPosition;
+		while (!rect.localScale.Equals(originScale)) {
+			Vector3 updateScale = rect.localScale + new Vector3 (0.1f, 0.1f, 0.1f);
+			rect.localScale = updateScale;
+			Debug.Log ("back:" + rect.localScale);
+			yield return new WaitForSeconds (0.01f);
+		}	
+	}
 
 	IEnumerator ShowImage(){
 		for (; ; ) {
