@@ -29,7 +29,7 @@ public class Presents : MonoBehaviour {
             {
                 var tmp = sr.ReadLine();
                 string[] data = tmp.Split(',');
-                presentTexture[presentCount] = ReadTexture(Application.dataPath + "/Textures/Presents/17F_Present/" + data[0], 600, 600); //パスからtextureの読み込み
+                presentTexture[presentCount] = ReadTexture(Application.dataPath + "/Textures/Presents/" + data[0], 600, 600); //パスからtextureの読み込み
                 GameManager.luckyPersonNum.Add(int.Parse(data[1])); //貰える人数
                 comments.Add(data[2]); //コメント
                 presentCount++;
