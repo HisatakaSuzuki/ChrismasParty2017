@@ -44,10 +44,10 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: 100
   m_MinHeight: 100
-  m_PreferredWidth: 250
+  m_PreferredWidth: 500
   m_PreferredHeight: 250
-  m_FlexibleWidth: 1
-  m_FlexibleHeight: 1
+  m_FlexibleWidth: 0.5
+  m_FlexibleHeight: 0.5
   m_LayoutPriority: 1
 --- !u!114 &114135157990132544
 MonoBehaviour:
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _TimeSource: 0
-  _OnEnable_PlayAnim: 0
+  _OnEnable_PlayAnim: -1
   _AnimationSlots:
   - _LocalSerializedData: "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<SE_Animation
       xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
@@ -203,8 +203,8 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 70
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
+    m_BestFit: 1
+    m_MinSize: 70
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -212,9 +212,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'tttttttttttttttttttttttttttttttttttttttttttttttt
-
-    tttttttttttttttttttttttttttttttttttttttttttttttt'
+  m_Text: 
 --- !u!222 &222869221412709102
 CanvasRenderer:
   m_ObjectHideFlags: 1

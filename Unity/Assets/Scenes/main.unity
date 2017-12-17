@@ -174,234 +174,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &125323101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 125323102}
-  - component: {fileID: 125323104}
-  - component: {fileID: 125323103}
-  - component: {fileID: 125323105}
-  - component: {fileID: 125323106}
-  m_Layer: 5
-  m_Name: Howto_Paragraph
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &125323102
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 125323101}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 410, z: 0}
-  m_LocalScale: {x: 0.83939, y: 0.79999, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1433014622}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -398.5, y: 3.000122}
-  m_SizeDelta: {x: 1123, y: 254}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &125323103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 125323101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 100
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'tttttttttttttttttttttttttttttttttttttttttttttttt
-
-    tttttttttttttttttttttttttttttttttttttttttttttttt'
---- !u!222 &125323104
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 125323101}
---- !u!114 &125323105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 125323101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b91132341bbeae4b91b9374ab5e8a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _TimeSource: 0
-  _OnEnable_PlayAnim: 0
-  _AnimationSlots:
-  - _LocalSerializedData: "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<SE_Animation
-      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
-      Name=\"Custom\" _Playback=\"Single\" _Backwards=\"false\" _PlaybackTimes=\"-1\"
-      _ExtraTimeFinal=\"0\" _ExtraTimePerLoop=\"0\">\r\n  <_Sequences>\r\n    <SE_AnimSequence
-      xsi:type=\"SE_AnimSequence_Alpha\">\r\n      <_Name />\r\n      <_StartType>OnAnimStart</_StartType>\r\n
-      \     <_StartDelay>0</_StartDelay>\r\n      <_Separation>0.22</_Separation>\r\n
-      \     <_RandomStart>0</_RandomStart>\r\n      <_DurationType>PerElement</_DurationType>\r\n
-      \     <_Duration>0.5</_Duration>\r\n      <_DurationRandom_Slower>0</_DurationRandom_Slower>\r\n
-      \     <_DurationRandom_Faster>0</_DurationRandom_Faster>\r\n      <_Playback>Single</_Playback>\r\n
-      \     <_Backwards>false</_Backwards>\r\n      <_PlaybackTimes>1</_PlaybackTimes>\r\n
-      \     <_EasingCurve>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
-      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
-      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
-      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
-      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurve>\r\n
-      \     <_TargetType>Letters</_TargetType>\r\n      <_TargetRangeType>All</_TargetRangeType>\r\n
-      \     <_TargetRangeStart>0</_TargetRangeStart>\r\n      <_TargetRangeAmount>0</_TargetRangeAmount>\r\n
-      \     <_InitAllElements>true</_InitAllElements>\r\n      <_Enabled>true</_Enabled>\r\n
-      \     <_From>0</_From>\r\n      <_FromRandom>0</_FromRandom>\r\n      <_To>1</_To>\r\n
-      \     <_ToRandom>0</_ToRandom>\r\n      <_AnimBlend_From>Blend</_AnimBlend_From>\r\n
-      \     <_AnimBlend_To>Blend</_AnimBlend_To>\r\n      <_OnFinish_SetAlphaToFinalValue>true</_OnFinish_SetAlphaToFinalValue>\r\n
-      \   </SE_AnimSequence>\r\n    <SE_AnimSequence xsi:type=\"SE_AnimSequence_Position\">\r\n
-      \     <_Name />\r\n      <_StartType>OnAnimStart</_StartType>\r\n      <_StartDelay>0</_StartDelay>\r\n
-      \     <_Separation>0.22</_Separation>\r\n      <_RandomStart>0</_RandomStart>\r\n
-      \     <_DurationType>PerElement</_DurationType>\r\n      <_Duration>0.5</_Duration>\r\n
-      \     <_DurationRandom_Slower>0</_DurationRandom_Slower>\r\n      <_DurationRandom_Faster>0</_DurationRandom_Faster>\r\n
-      \     <_Playback>Single</_Playback>\r\n      <_Backwards>false</_Backwards>\r\n
-      \     <_PlaybackTimes>1</_PlaybackTimes>\r\n      <_EasingCurve>\r\n        <keys>\r\n
-      \         <Keyframe>\r\n            <time>0</time>\r\n            <value>0</value>\r\n
-      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>0.228156775</time>\r\n            <value>0.990923762</value>\r\n
-      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>0.5512305</time>\r\n            <value>-0.350667179</value>\r\n
-      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>0.819639</time>\r\n            <value>0.06735356</value>\r\n
-      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>1</time>\r\n            <value>0</value>\r\n            <inTangent>-0.09293859</inTangent>\r\n
-      \           <outTangent>-0.09293859</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
-      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
-      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurve>\r\n
-      \     <_TargetType>Letters</_TargetType>\r\n      <_TargetRangeType>All</_TargetRangeType>\r\n
-      \     <_TargetRangeStart>0</_TargetRangeStart>\r\n      <_TargetRangeAmount>0</_TargetRangeAmount>\r\n
-      \     <_InitAllElements>false</_InitAllElements>\r\n      <_Enabled>true</_Enabled>\r\n
-      \     <_From>\r\n        <x>0</x>\r\n        <y>0</y>\r\n        <z>0</z>\r\n
-      \     </_From>\r\n      <_To>\r\n        <x>0</x>\r\n        <y>1</y>\r\n        <z>0</z>\r\n
-      \     </_To>\r\n      <_FromRandom>\r\n        <x>0</x>\r\n        <y>0</y>\r\n
-      \       <z>0</z>\r\n      </_FromRandom>\r\n      <_ToRandom>\r\n        <x>0</x>\r\n
-      \       <y>0</y>\r\n        <z>0</z>\r\n      </_ToRandom>\r\n      <_AnimBlend_From>Offset</_AnimBlend_From>\r\n
-      \     <_AnimBlend_To>Offset</_AnimBlend_To>\r\n      <_ApplyX>true</_ApplyX>\r\n
-      \     <_ApplyY>true</_ApplyY>\r\n      <_ApplyZ>true</_ApplyZ>\r\n      <_UseAxisEasingCurves>false</_UseAxisEasingCurves>\r\n
-      \     <_EasingCurveY>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
-      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
-      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
-      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
-      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveY>\r\n
-      \     <_EasingCurveZ>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
-      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
-      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
-      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
-      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveZ>\r\n
-      \   </SE_AnimSequence>\r\n    <SE_AnimSequence xsi:type=\"SE_AnimSequence_Rotation\">\r\n
-      \     <_Name />\r\n      <_StartType>OnAnimStart</_StartType>\r\n      <_StartDelay>0</_StartDelay>\r\n
-      \     <_Separation>0.22</_Separation>\r\n      <_RandomStart>0</_RandomStart>\r\n
-      \     <_DurationType>PerElement</_DurationType>\r\n      <_Duration>0.5</_Duration>\r\n
-      \     <_DurationRandom_Slower>0</_DurationRandom_Slower>\r\n      <_DurationRandom_Faster>0</_DurationRandom_Faster>\r\n
-      \     <_Playback>Single</_Playback>\r\n      <_Backwards>false</_Backwards>\r\n
-      \     <_PlaybackTimes>1</_PlaybackTimes>\r\n      <_EasingCurve>\r\n        <keys>\r\n
-      \         <Keyframe>\r\n            <time>0</time>\r\n            <value>0</value>\r\n
-      \           <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
-      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
-      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
-      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurve>\r\n
-      \     <_TargetType>Letters</_TargetType>\r\n      <_TargetRangeType>All</_TargetRangeType>\r\n
-      \     <_TargetRangeStart>0</_TargetRangeStart>\r\n      <_TargetRangeAmount>0</_TargetRangeAmount>\r\n
-      \     <_InitAllElements>true</_InitAllElements>\r\n      <_Enabled>true</_Enabled>\r\n
-      \     <_From>\r\n        <x>0</x>\r\n        <y>0</y>\r\n        <z>360</z>\r\n
-      \     </_From>\r\n      <_To>\r\n        <x>0</x>\r\n        <y>0</y>\r\n        <z>0</z>\r\n
-      \     </_To>\r\n      <_FromRandom>\r\n        <x>0</x>\r\n        <y>0</y>\r\n
-      \       <z>0</z>\r\n      </_FromRandom>\r\n      <_ToRandom>\r\n        <x>0</x>\r\n
-      \       <y>0</y>\r\n        <z>0</z>\r\n      </_ToRandom>\r\n      <_AnimBlend_From>Offset</_AnimBlend_From>\r\n
-      \     <_AnimBlend_To>Offset</_AnimBlend_To>\r\n      <_ApplyX>true</_ApplyX>\r\n
-      \     <_ApplyY>true</_ApplyY>\r\n      <_ApplyZ>true</_ApplyZ>\r\n      <_UseAxisEasingCurves>false</_UseAxisEasingCurves>\r\n
-      \     <_EasingCurveY>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
-      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
-      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
-      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
-      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveY>\r\n
-      \     <_EasingCurveZ>\r\n        <keys>\r\n          <Keyframe>\r\n            <time>0</time>\r\n
-      \           <value>0</value>\r\n            <inTangent>0</inTangent>\r\n            <outTangent>0</outTangent>\r\n
-      \           <tangentMode>0</tangentMode>\r\n          </Keyframe>\r\n          <Keyframe>\r\n
-      \           <time>1</time>\r\n            <value>1</value>\r\n            <inTangent>0</inTangent>\r\n
-      \           <outTangent>0</outTangent>\r\n            <tangentMode>0</tangentMode>\r\n
-      \         </Keyframe>\r\n        </keys>\r\n        <preWrapMode>ClampForever</preWrapMode>\r\n
-      \       <postWrapMode>ClampForever</postWrapMode>\r\n      </_EasingCurveZ>\r\n
-      \     <_Pivot>\r\n        <x>0.5</x>\r\n        <y>0.5</y>\r\n        <z>0</z>\r\n
-      \     </_Pivot>\r\n      <_PivotType>Relative_Letter</_PivotType>\r\n    </SE_AnimSequence>\r\n
-      \ </_Sequences>\r\n</SE_Animation>"
-    _Preset: {fileID: 11400000, guid: 6c43d39a4da5cf6479d48b6f47af98ce, type: 2}
-  _OnAnimation_Finished:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: I2.TextAnimation.UnityEventSEAnimation, Assembly-CSharp-firstpass,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!114 &125323106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 125323101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1679637790, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: 100
-  m_MinHeight: 100
-  m_PreferredWidth: 250
-  m_PreferredHeight: 250
-  m_FlexibleWidth: 1
-  m_FlexibleHeight: 1
-  m_LayoutPriority: 1
 --- !u!1 &162321725
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +199,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 162321725}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -413.00003, y: 82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 717810219}
@@ -435,8 +207,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -413, y: 82}
+  m_SizeDelta: {x: 326.8, y: 255.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162321727
 MonoBehaviour:
@@ -450,14 +222,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presentTexture:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 498a24ea7845ce247b54c69b9d6b796b, type: 3}
+  - {fileID: 2800000, guid: 1b1c1dbf2b0bb8940a112c1f12128e6d, type: 3}
+  - {fileID: 2800000, guid: f8fd261a672d6354fa8479ab585ec7c9, type: 3}
+  - {fileID: 2800000, guid: ffaa9be7796e30f42ad4609b3608f137, type: 3}
+  - {fileID: 2800000, guid: 0bc6ed9129564a446bf65fe6239cc0bd, type: 3}
+  - {fileID: 2800000, guid: 6153eb09659922647953a3108cd095b7, type: 3}
+  - {fileID: 2800000, guid: ce6091c4fd9568944b97a37a6637444d, type: 3}
+  - {fileID: 2800000, guid: 57170cd19dd47d647a3af9ff82a1cc26, type: 3}
+  - {fileID: 2800000, guid: 7401292b7b0d9b3498e46d489c5967c8, type: 3}
+  - {fileID: 2800000, guid: 25a5d75c04e8b604b941add431090556, type: 3}
+  - {fileID: 2800000, guid: 8386c4a93280c9149b7ac255445b95b2, type: 3}
+  - {fileID: 2800000, guid: 7401292b7b0d9b3498e46d489c5967c8, type: 3}
+  - {fileID: 2800000, guid: c319536e1c3745b4599356a98bd883d4, type: 3}
+  - {fileID: 2800000, guid: f543595c8165dda4387acc540170939a, type: 3}
+  - {fileID: 2800000, guid: 3986148432e852047b789d80fc17f20f, type: 3}
+  - {fileID: 2800000, guid: 22bead6d061a678438e122b0b0f51d1b, type: 3}
+  - {fileID: 2800000, guid: d9bbf240fac3cd64e9bad01a7fadba1e, type: 3}
+  - {fileID: 2800000, guid: 7a15c574099019543a969df2b0ed446d, type: 3}
+  - {fileID: 2800000, guid: 0795e3402e963304bb5e7f24cfd9a362, type: 3}
+  - {fileID: 2800000, guid: d9bbf240fac3cd64e9bad01a7fadba1e, type: 3}
+  - {fileID: 2800000, guid: f543595c8165dda4387acc540170939a, type: 3}
+  - {fileID: 2800000, guid: 3986148432e852047b789d80fc17f20f, type: 3}
+  - {fileID: 2800000, guid: 8386c4a93280c9149b7ac255445b95b2, type: 3}
+  - {fileID: 2800000, guid: 25a5d75c04e8b604b941add431090556, type: 3}
+  - {fileID: 2800000, guid: ce6091c4fd9568944b97a37a6637444d, type: 3}
+  - {fileID: 2800000, guid: ffaa9be7796e30f42ad4609b3608f137, type: 3}
+  - {fileID: 2800000, guid: 22bead6d061a678438e122b0b0f51d1b, type: 3}
+  - {fileID: 2800000, guid: 0795e3402e963304bb5e7f24cfd9a362, type: 3}
+  - {fileID: 2800000, guid: f543595c8165dda4387acc540170939a, type: 3}
+  - {fileID: 2800000, guid: d9bbf240fac3cd64e9bad01a7fadba1e, type: 3}
   max: 600
 --- !u!114 &162321728
 MonoBehaviour:
@@ -471,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -501,6 +295,7 @@ GameObject:
   - component: {fileID: 228997387}
   - component: {fileID: 228997388}
   - component: {fileID: 228997389}
+  - component: {fileID: 228997390}
   m_Layer: 5
   m_Name: LotteryNumbers
   m_TagString: Untagged
@@ -541,6 +336,9 @@ MonoBehaviour:
     type: 2}
   sleepTime: 0.1
   seed: 1
+  effect:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &228997389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,6 +362,86 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!82 &228997390
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 228997386}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &251932004
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433014622}
   - component: {fileID: 1433014623}
+  - component: {fileID: 1433014624}
   m_Layer: 5
   m_Name: HowTo
   m_TagString: Untagged
@@ -825,9 +704,8 @@ RectTransform:
   m_GameObject: {fileID: 1433014621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.703789, y: 0.77500015, z: 1}
-  m_Children:
-  - {fileID: 125323102}
+  m_LocalScale: {x: 0.8518021, y: 0.7071724, z: 1}
+  m_Children: []
   m_Father: {fileID: 717810219}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -854,10 +732,33 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+--- !u!114 &1433014624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433014621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8e439820189c24cb042d5bb0287539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paragraph: {fileID: 1292648322234074, guid: 640d46eae6218174594534399355f8c9, type: 2}
+  phrases:
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
+  - temptemptemptemptemptemptemptemptemptemptemptemptemptemp
 --- !u!1 &1557352556
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +787,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.505
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -966,7 +867,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a92066e08a24a148b1166c7749c1d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm: []
+  bgm:
+  - {fileID: 8300000, guid: bb0dc41130d766b4ea773e8c9a4193e0, type: 3}
+  - {fileID: 8300000, guid: 0615eb9a4eee9e24fb71b45a79fc29e2, type: 3}
+  - {fileID: 8300000, guid: 79f1557ab3c6be04fba4557a58b947af, type: 3}
+  - {fileID: 8300000, guid: 66099ca9009a18c418e439fd89d7baad, type: 3}
+  - {fileID: 8300000, guid: 6c94b993edfe38a47876c6972b4cbb1a, type: 3}
+  - {fileID: 8300000, guid: 3d7c2b3249aae8f499e58c9aa3459da8, type: 3}
+  - {fileID: 8300000, guid: 5ff9466ff719ac64389dd54680efa28c, type: 3}
+  - {fileID: 8300000, guid: 6feec701a58648c47a61466d3681705c, type: 3}
+  - {fileID: 8300000, guid: 0da614e8eb676c747a627e344eb5924e, type: 3}
+  - {fileID: 8300000, guid: a5506bb8a7eeb1140b72817fe430c867, type: 3}
+  - {fileID: 8300000, guid: 18f17e5b5d2ca7a499417e4988a3d990, type: 3}
+  - {fileID: 8300000, guid: 2d1db36323122ed468287946e004fa3a, type: 3}
+  - {fileID: 8300000, guid: 0ccce89f1b5c39d46981ff25fae14892, type: 3}
+  - {fileID: 8300000, guid: d107bf1a2e696fe4689042a8896db07d, type: 3}
+  - {fileID: 8300000, guid: 23a9c27c6f240e7459d9088189505ff3, type: 3}
+  - {fileID: 8300000, guid: e3c5ea730cc832d479f94869eba595a4, type: 3}
+  - {fileID: 8300000, guid: a314548f599527445ade1d0d7b45ed99, type: 3}
+  - {fileID: 8300000, guid: e0b14a86502e5304597ad18edc90b586, type: 3}
+  - {fileID: 8300000, guid: 977d46bd2e3eae64c9a699c997dde573, type: 3}
+  - {fileID: 8300000, guid: 097cf9feec6bf9d43b1c9c3f518740d7, type: 3}
+  - {fileID: 8300000, guid: ea56ead32de8535419abeacd43f36045, type: 3}
+  - {fileID: 8300000, guid: 90abd9d94999d4c4abb0e0f39bcb48ad, type: 3}
+  - {fileID: 8300000, guid: c541e7f807df08b45897b0e2f22f1c69, type: 3}
+  - {fileID: 8300000, guid: ce162c39cb748a249a5426393512568f, type: 3}
+  - {fileID: 8300000, guid: 7956c680f8d480a43b44d9d701b46206, type: 3}
+  - {fileID: 8300000, guid: 6b1be49aa074d1445b0b1f4256296bfc, type: 3}
+  - {fileID: 8300000, guid: c5fc74d02118d5e4b8157f126e4d0cf0, type: 3}
+  - {fileID: 8300000, guid: 706663577d9fd764abc05e255ed482dd, type: 3}
+  - {fileID: 8300000, guid: 8532fc57014cf7946893bcd3c70c642d, type: 3}
+  - {fileID: 8300000, guid: 5c2d25d216acf33408c72b10d1bc1d60, type: 3}
+  - {fileID: 8300000, guid: c59db330f721fc64a90f861bf9c3937f, type: 3}
   test: {fileID: 1348436652}
   lotterySystem: {fileID: 228997386}
 --- !u!4 &1557352559

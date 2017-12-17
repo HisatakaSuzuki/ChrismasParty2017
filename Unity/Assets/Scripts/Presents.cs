@@ -28,19 +28,22 @@ public class Presents : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if (GameManager.state == GameManager.STATE.PresentShow) {//プレゼントの紹介
-			rawImage.texture = presentTexture [GameManager.presentIndex];
+    	if (GameManager.state == GameManager.STATE.PresentShow)
+        {//プレゼントの紹介
+            rawImage.texture = presentTexture[GameManager.presentIndex];
+            rect = this.GetComponent<RectTransform> ();
+            rect.sizeDelta = CalculateRectSize (presentTexture [GameManager.presentIndex].width, presentTexture [GameManager.presentIndex].height, max);
 			if (!showFlag) {
 				StartCoroutine (ShowImage ());
 				showFlag = true;
 			}
-		}
+        }
     }
 
 	IEnumerator ShowImage(){
 		for (; ; ) {
 			yield return new WaitForSeconds (0.01f);
-			Color c = new Color (.0f, .0f, .0f, rawImage.color.a + 0.01f);
+			Color c = new Color (rawImage.color.r, rawImage.color.g, rawImage.color.b, rawImage.color.a + 0.01f);
 			rawImage.color = c;
 			if (rawImage.color.a >= 0.95f) {
 				break;
