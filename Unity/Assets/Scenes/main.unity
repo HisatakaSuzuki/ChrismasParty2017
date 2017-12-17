@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 162321729}
   - component: {fileID: 162321728}
   - component: {fileID: 162321727}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: PresentImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 228997388}
   - component: {fileID: 228997389}
   - component: {fileID: 228997390}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: LotteryNumbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 1433014622}
   - component: {fileID: 1433014623}
   - component: {fileID: 1433014624}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: HowTo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EventMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_MaxRayIntersections: 0
 --- !u!1 &2130005893
 GameObject:
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 2130005894}
   - component: {fileID: 2130005896}
   - component: {fileID: 2130005895}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

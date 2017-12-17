@@ -41,8 +41,15 @@ public class LotterySystem : MonoBehaviour {
 
         if (GameManager.state == GameManager.STATE.Lottery) {
             if (!showFlag) {
-				showNumbers = new GameObject[GameManager.luckyPersonNum[GameManager.presentIndex]];
-				lotteryText = new Text[GameManager.luckyPersonNum[GameManager.presentIndex]];
+				int index = GameManager.luckyPersonNum [GameManager.presentIndex];
+				if (index < 4) {
+					this.gameObject.GetComponent<GridLayoutGroup> ().startAxis = GridLayoutGroup.Axis.Vertical;
+				} else {
+					this.gameObject.GetComponent<GridLayoutGroup> ().startAxis = GridLayoutGroup.Axis.Horizontal;
+				}
+
+				showNumbers = new GameObject[index];
+				lotteryText = new Text[index];
                 for (int i = 0; i < showNumbers.Length; i++) {
 					showNumbers [i] = Instantiate (lotteryNumberObject, this.transform) as GameObject;
 					lotteryText [i] = showNumbers [i].GetComponent<Text> ();

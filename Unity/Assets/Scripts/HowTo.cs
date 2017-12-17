@@ -13,7 +13,7 @@ public class HowTo : MonoBehaviour {
 
 	public static int shownParagraph;
 
-	public string[] phrases = new string[paragraphNum]; //インスペクターから文字を入れておく
+	public string[] phrases = new string[paragraphNum]; 
 
 	// Use this for initialization
 	void Start () {
