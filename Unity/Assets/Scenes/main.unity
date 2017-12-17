@@ -337,8 +337,8 @@ MonoBehaviour:
   sleepTime: 0.1
   seed: 1
   effect:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 0e4d050f4d728ab478268596f4739390, type: 3}
+  - {fileID: 8300000, guid: b1179aa63188f9c4189c5c13f246c821, type: 3}
 --- !u!114 &228997389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,6 +769,7 @@ GameObject:
   - component: {fileID: 1557352559}
   - component: {fileID: 1557352558}
   - component: {fileID: 1557352557}
+  - component: {fileID: 1557352560}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -914,6 +915,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1557352560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1557352556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622879d71e6704446ba8241b1cb24ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorImage: {fileID: 2800000, guid: 3641760d41dcc0b489e3fc0133fb29b7, type: 3}
+  snowPrefab: {fileID: 1411795316765238, guid: 32f974b797f7ca74d8f9a3503275ae36, type: 2}
+  canvas: {fileID: 717810215}
+  snowInstantiateRate: 20
 --- !u!1 &1659926385
 GameObject:
   m_ObjectHideFlags: 0

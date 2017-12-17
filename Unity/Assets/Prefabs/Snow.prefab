@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 224245654916624264}
   - component: {fileID: 222442181434173468}
   - component: {fileID: 114316915574011638}
+  - component: {fileID: 50284935734651144}
   m_Layer: 5
   m_Name: Snow
   m_TagString: Untagged
@@ -28,6 +29,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!50 &50284935734651144
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411795316765238}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &114316915574011638
 MonoBehaviour:
   m_ObjectHideFlags: 1
