@@ -8,7 +8,7 @@ public class Presents : MonoBehaviour {
 	public Texture2D[] presentTexture;
     public GameObject commentObj; //Comment用のオブジェクト
 
-	RawImage rawImage;
+    RawImage rawImage;
 	RectTransform rect;
 	Color color;
 
