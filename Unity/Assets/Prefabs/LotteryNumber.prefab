@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.2, g: 0.14901961, b: 0.14901961, a: 0.5}
+  m_EffectColor: {r: 0.9176471, g: 0.9058824, b: 0.9058824, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &114750174825259072
@@ -165,9 +165,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAtari: 0
-  non_selectedColor: {r: 0.19852942, g: 0.14889707, b: 0.14889707, a: 1}
+  non_selectedColor: {r: 0.9176471, g: 0.9058824, b: 0.9058824, a: 1}
   selectedColor: {r: 0.8897059, g: 0.20934255, b: 0.20934255, a: 1}
   hoverColor: {r: 0.58077425, g: 0.9632353, b: 0.7416716, a: 1}
+  text: {fileID: 0}
   waitTime: 0.01
 --- !u!114 &114994530434219584
 MonoBehaviour:
@@ -181,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.9191176, g: 0.9056012, b: 0.9056012, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -189,7 +190,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 7a1ea19f6a8e05d4291e9d78ad02c9bc, type: 3}
+    m_Font: {fileID: 12800000, guid: 536c96f4db80a5c4fa1e6403013c1ebf, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 1

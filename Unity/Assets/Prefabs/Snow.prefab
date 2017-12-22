@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222442181434173468}
   - component: {fileID: 114316915574011638}
   - component: {fileID: 50284935734651144}
+  - component: {fileID: 114846377614455068}
   m_Layer: 5
   m_Name: Snow
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -76,6 +77,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114846377614455068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411795316765238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8cad354e530a8d4a95a04ae5790504e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snow: {fileID: 0}
+  meltSpeed: 0.3
+  snowObject: {fileID: 0}
+  snowTransform: {fileID: 0}
+  resetTime: 30
 --- !u!222 &222442181434173468
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -90,7 +107,7 @@ RectTransform:
   m_GameObject: {fileID: 1411795316765238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

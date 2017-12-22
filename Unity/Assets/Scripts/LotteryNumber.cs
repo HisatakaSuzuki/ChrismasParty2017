@@ -17,7 +17,7 @@ public class LotteryNumber : MonoBehaviour{
 
 	bool prev_isAtari;
 
-	Text text;
+	public Text text;
 	RectTransform rectTransform;
 	Outline textOutline;
 

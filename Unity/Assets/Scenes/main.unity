@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -221,37 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe06cdeb23a48ce4798c1843b722396d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentTexture:
-  - {fileID: 2800000, guid: 498a24ea7845ce247b54c69b9d6b796b, type: 3}
-  - {fileID: 2800000, guid: 1b1c1dbf2b0bb8940a112c1f12128e6d, type: 3}
-  - {fileID: 2800000, guid: f8fd261a672d6354fa8479ab585ec7c9, type: 3}
-  - {fileID: 2800000, guid: ffaa9be7796e30f42ad4609b3608f137, type: 3}
-  - {fileID: 2800000, guid: 0bc6ed9129564a446bf65fe6239cc0bd, type: 3}
-  - {fileID: 2800000, guid: 6153eb09659922647953a3108cd095b7, type: 3}
-  - {fileID: 2800000, guid: ce6091c4fd9568944b97a37a6637444d, type: 3}
-  - {fileID: 2800000, guid: 57170cd19dd47d647a3af9ff82a1cc26, type: 3}
-  - {fileID: 2800000, guid: 7401292b7b0d9b3498e46d489c5967c8, type: 3}
-  - {fileID: 2800000, guid: 25a5d75c04e8b604b941add431090556, type: 3}
-  - {fileID: 2800000, guid: 8386c4a93280c9149b7ac255445b95b2, type: 3}
-  - {fileID: 2800000, guid: 7401292b7b0d9b3498e46d489c5967c8, type: 3}
-  - {fileID: 2800000, guid: c319536e1c3745b4599356a98bd883d4, type: 3}
-  - {fileID: 2800000, guid: f543595c8165dda4387acc540170939a, type: 3}
-  - {fileID: 2800000, guid: 3986148432e852047b789d80fc17f20f, type: 3}
-  - {fileID: 2800000, guid: 22bead6d061a678438e122b0b0f51d1b, type: 3}
-  - {fileID: 2800000, guid: d9bbf240fac3cd64e9bad01a7fadba1e, type: 3}
-  - {fileID: 2800000, guid: 7a15c574099019543a969df2b0ed446d, type: 3}
-  - {fileID: 2800000, guid: 0795e3402e963304bb5e7f24cfd9a362, type: 3}
-  - {fileID: 2800000, guid: d9bbf240fac3cd64e9bad01a7fadba1e, type: 3}
-  - {fileID: 2800000, guid: f543595c8165dda4387acc540170939a, type: 3}
-  - {fileID: 2800000, guid: 3986148432e852047b789d80fc17f20f, type: 3}
-  - {fileID: 2800000, guid: 8386c4a93280c9149b7ac255445b95b2, type: 3}
-  - {fileID: 2800000, guid: 25a5d75c04e8b604b941add431090556, type: 3}
-  - {fileID: 2800000, guid: ce6091c4fd9568944b97a37a6637444d, type: 3}
-  - {fileID: 2800000, guid: ffaa9be7796e30f42ad4609b3608f137, type: 3}
-  - {fileID: 2800000, guid: 22bead6d061a678438e122b0b0f51d1b, type: 3}
-  - {fileID: 2800000, guid: 0795e3402e963304bb5e7f24cfd9a362, type: 3}
-  - {fileID: 2800000, guid: f543595c8165dda4387acc540170939a, type: 3}
-  - {fileID: 2800000, guid: d9bbf240fac3cd64e9bad01a7fadba1e, type: 3}
+  presentTexture: []
+  commentObj: {fileID: 653503738}
   max: 600
   originalPosition: {x: 0, y: 80, z: 0}
   movedPosition: {x: -400, y: 80, z: 0}
@@ -372,9 +343,10 @@ AudioSource:
   m_GameObject: {fileID: 228997386}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243000214846966718, guid: d1644b5a404a0c74b9c2e4e0fc92c23a,
+    type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
@@ -520,6 +492,7 @@ GameObject:
   - component: {fileID: 378869634}
   - component: {fileID: 378869633}
   - component: {fileID: 378869632}
+  - component: {fileID: 378869635}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -628,7 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.9558824, g: 0.9418253, b: 0.9418253, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -636,7 +609,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 536c96f4db80a5c4fa1e6403013c1ebf, type: 3}
     m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
@@ -648,13 +621,27 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SIE X'Mas Party 2017
+  m_Text: "SIE X\u2019Mas Party 2017"
 --- !u!222 &378869634
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 378869630}
+--- !u!114 &378869635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378869630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.30687717, g: 0.8688761, b: 0.9485294, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &653503738
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +652,7 @@ GameObject:
   - component: {fileID: 653503739}
   - component: {fileID: 653503741}
   - component: {fileID: 653503740}
+  - component: {fileID: 653503742}
   m_Layer: 5
   m_Name: Comment
   m_TagString: Untagged
@@ -679,7 +667,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 653503738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -384, y: -330, z: 0}
+  m_LocalPosition: {x: -360, y: -330, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 717810219}
@@ -687,7 +675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: -330}
+  m_AnchoredPosition: {x: -360, y: -330}
   m_SizeDelta: {x: 800, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &653503740
@@ -702,7 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.8602941, g: 0.82233995, b: 0.82233995, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -710,8 +698,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: 1d015e2bd6c2b28499b7889e67c3a334, type: 3}
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -729,6 +717,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 653503738}
+--- !u!114 &653503742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653503738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &717810215
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,15 +977,18 @@ MonoBehaviour:
   title: {fileID: 378869630}
   phrases:
   - "SIE X'mas Party 2017 \u30D7\u30EC\u30BC\u30F3\u30C8\u62BD\u9078\u4F1A\u3078\u3088\u3046\u3053\u305D\uFF01"
-  - "\u3053\u306E\u62BD\u9078\u4F1A\u306E\u30EB\u30FC\u30EB\u8AAC\u660E\u3092\u3057\u307E\u3059\u3002"
-  - "\u7686\u3055\u3093\u306B\u306F\u5165\u5834\u306E\u969B\u306B\u53D7\u4ED8\u3067\u62BD\u9078\u5238\u3092\u914D\u3063\u3066\u304A\u308A\u307E\u3057\u305F\u3002"
-  - "\u3053\u308C\u304B\u3089\u30D7\u30EC\u30BC\u30F3\u30C8\u306E\u6570\u3060\u3051\u62BD\u9078\u3057\u3066\u3044\u304D\u307E\u3059\u306E\u3067\u3001\u304A\u624B\u6301\u3061\u306E\u756A\u53F7\u3068\u540C\u3058\u6570\u5B57\u304C\u3067\u308B\u304B\u30C1\u30A7\u30C3\u30AF\u3057\u3066\u304A\u3044\u3066\u304F\u3060\u3055\u3044\u3002"
-  - "\u6301\u3063\u3066\u3044\u305F\u756A\u53F7\u304C\u51FA\u305F\u3068\u3044\u3046\u30E9\u30C3\u30AD\u30FC\u306A\u65B9\u306B\u306F\u8C6A\u83EF\u30D7\u30EC\u30BC\u30F3\u30C8\u3092\u5DEE\u3057\u4E0A\u3052\u307E\u3059\uFF01\uFF01"
-  - "\u30D7\u30EC\u30BC\u30F3\u30C8\u3092\u304A\u6E21\u3057\u3059\u308B\u3068\u304D\u306B\u3001\u5F53\u9078\u3057\u305F\u62BD\u9078\u5238\u3068\u306E\u5F15\u304D\u63DB\u3048\u306B\u306A\u308A\u307E\u3059\u306E\u3067\u3001\u306A\u304F\u3055\u306A\u3044\u3088\u3046\u306B\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
-  - "\u307E\u305F\u3001\u4ECA\u5E74\u306F\u30D7\u30EC\u30BC\u30F3\u30C8\u4EA4\u63DB\u6240\u30921F\u306E\u30ED\u30D3\u30FC\u306B\u8A2D\u3051\u3066\u3044\u307E\u3059\u3002"
-  - "\u306A\u306E\u3067\u3001\u5F53\u9078\u3057\u305F\u5F8C\u3082\u30D1\u30FC\u30C6\u30A3\u3092\u7D42\u6F14\u6642\u9593\u307E\u3067\u697D\u3057\u3093\u3067\u3044\u305F\u3060\u304D\u3001\u5E30\u308A\u304C\u3051\u306E\u4EA4\u63DB\u3082\u3067\u304D\u307E\u3059\u3002"
-  - "\u4E00\u3064\u3001\u6CE8\u610F\u70B9\u304C\u3042\u308A\u307E\u3059\u3002\u4F1A\u5834\u306F\u4EBA\u304C\u591A\u3044\u306E\u3067\u3001\u7686\u3055\u3093\u304C\u5F53\u9078\u3057\u305F\u3053\u3068\u306B\u53F8\u4F1A\u304C\u6C17\u3065\u3051\u306A\u3044\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059\u3002"
-  - "\u306A\u306E\u3067\u3001\u5F53\u9078\u3057\u305F\u3068\u304D\u306F\u5927\u304D\u306A\u58F0\u3067\u5F53\u9078\u756A\u53F7\u3092\u30A2\u30D4\u30FC\u30EB\u3057\u3066\u3044\u305F\u3060\u3051\u308B\u3068\u52A9\u304B\u308A\u307E\u3059\u3002"
+  - "\u30EB\u30FC\u30EB\u8AAC\u660E"
+  - "1. \u30D7\u30EC\u30BC\u30F3\u30C8\u7D39\u4ECB"
+  - "2. \u756A\u53F7\u3092\u8868\u793A"
+  - "3. \u5927\u304D\u306A\u58F0\u3067\u8FD4\u4E8B"
+  - "4. \u3044\u306A\u304B\u3063\u305F\u5834\u5408\u306F\u518D\u5EA6\u756A\u53F7\u8868\u793A"
+  - "5. \u756A\u53F7\u672D\u3092\u6301\u3063\u30661F\u306E\u30D7\u30EC\u30BC\u30F3\u30C8\u4EA4\u63DB\u6240\u3078"
+  - "\u30D7\u30EC\u30BC\u30F3\u30C8\u4EA4\u63DB\u6240\u306F21:30\u307E\u3067\u306A\u306E\u3067\u304A\u65E9\u3081\u306B\uFF01"
+  - "\u6CE8\u610F\u4E8B\u9805"
+  - "\u6CE8\u610F\u4E8B\u98051 \u8A72\u5F53\u30D5\u30ED\u30A2\u3067\u304A\u697D\u3057\u307F\u304F\u3060\u3055\u3044"
+  - "\u6CE8\u610F\u4E8B\u98052 \u8907\u6570\u679A\u6301\u3064\u306E\u306F\u3084\u3081\u3066\u304F\u3060\u3055\u3044"
+  - "\u6CE8\u610F\u4E8B\u98053 SNS \u3078\u306E\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u306F\u7981\u6B62\u3067\u3059"
+  - "\u6CE8\u610F\u4E8B\u98054 \u30B2\u30FC\u30E0\u30BD\u30D5\u30C8\u306A\u3069\u306E\u8B72\u6E21\u306A\u3069\u306F\u7981\u6B62\u3067\u3059"
 --- !u!1 &1557352556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +1015,8 @@ AudioSource:
   m_GameObject: {fileID: 1557352556}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243682976930067068, guid: d1644b5a404a0c74b9c2e4e0fc92c23a,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.505
@@ -1125,8 +1131,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8532fc57014cf7946893bcd3c70c642d, type: 3}
   - {fileID: 8300000, guid: 5c2d25d216acf33408c72b10d1bc1d60, type: 3}
   - {fileID: 8300000, guid: c59db330f721fc64a90f861bf9c3937f, type: 3}
+  snapshotMove: 3
+  titleEnd: {fileID: 378869630}
+  endComment: Thank You!!
   test: {fileID: 1348436652}
   lotterySystem: {fileID: 228997386}
+  startEndSnapshot: {fileID: 24500006, guid: d1644b5a404a0c74b9c2e4e0fc92c23a, type: 2}
+  playingSnapshot: {fileID: 245446531658447714, guid: d1644b5a404a0c74b9c2e4e0fc92c23a,
+    type: 2}
 --- !u!4 &1557352559
 Transform:
   m_ObjectHideFlags: 0
@@ -1153,8 +1165,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorImage: {fileID: 2800000, guid: 3641760d41dcc0b489e3fc0133fb29b7, type: 3}
   snowPrefab: {fileID: 1411795316765238, guid: 32f974b797f7ca74d8f9a3503275ae36, type: 2}
+  prev_mousePos: {x: 0, y: 0, z: 0}
   canvas: {fileID: 717810215}
-  snowInstantiateRate: 50
+  snowInstantiateRate: 20
+  meltTime: 0.1
 --- !u!1 &1659926385
 GameObject:
   m_ObjectHideFlags: 0

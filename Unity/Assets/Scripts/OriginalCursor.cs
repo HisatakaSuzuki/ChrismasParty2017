@@ -9,10 +9,11 @@ public class OriginalCursor : MonoBehaviour {
 	public GameObject snowPrefab;
 
 
-	Vector3 prev_mousePos;
+	public Vector3 prev_mousePos;
 	public GameObject canvas;
 
-	public float snowInstantiateRate = 10.0f;
+	public float snowInstantiateRate = 1.0f;
+    public float meltTime = 1.0f;
 
 	GameObject[] snows = new GameObject[100];
 	int snowIndex = 0;
@@ -32,16 +33,31 @@ public class OriginalCursor : MonoBehaviour {
 			if (snows [snowIndex] != null) {
 				Destroy(snows[snowIndex]);
 			}
-			snows [snowIndex++] = Instantiate (snowPrefab, prev_mousePos, Quaternion.identity,canvas.transform) as GameObject;
+			//snows [snowIndex++] = Instantiate (snowPrefab, prev_mousePos, Quaternion.identity,canvas.transform) as GameObject;
+            Instantiate(snowPrefab, prev_mousePos, Quaternion.identity, canvas.transform);
+            prev_mousePos = Input.mousePosition;
 		}
-		prev_mousePos = Input.mousePosition;
 
-		foreach (var s in snows) {
-			if (s != null) {
-				if (s.GetComponent<RectTransform> ().position.y < -540) {
-					Destroy (s);
-				}
-			}
-		}
+        //foreach (var s in snows)
+        //{
+        //    if (s != null)
+        //    {
+        //        Color src = s.GetComponent<Image>().color;
+        //        Color c = new Color(src.r, src.g, src.b, src.a - (meltTime * Time.deltaTime));
+        //        s.GetComponent<Image>().color = c;
+        //        if (s.GetComponent<Image>().color.a <= 0.0f)
+        //        {
+        //            Destroy(s);
+        //        }
+        //    }
+        //}
+
+        //foreach (var s in snows) {
+        //    if (s != null) {
+        //        if (s.GetComponent<RectTransform> ().position.y < -540) {
+        //            Destroy (s);
+        //        }
+        //    }
+        //}
 	}
 }

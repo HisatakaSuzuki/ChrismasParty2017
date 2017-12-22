@@ -6,6 +6,7 @@ using System.Threading;
 using System.IO;
 
 
+
 public class LotterySystem : MonoBehaviour {
 	public GameObject lotteryNumberObject;	//スロット用番号テキストのプレハブ
 
@@ -28,11 +29,13 @@ public class LotterySystem : MonoBehaviour {
 
     public AudioClip[] effect;
     AudioSource audioSource;
+    
 
     // Use this for initialization
     void Start () {
 		showFlag = false;
         audioSource = this.gameObject.GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame

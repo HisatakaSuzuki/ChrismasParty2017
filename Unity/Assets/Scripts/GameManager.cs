@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using System;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour {
 	public enum STATE
@@ -21,6 +22,11 @@ public class GameManager : MonoBehaviour {
 	AudioSource audioSource;
     int bgmNum = 0;
 
+    public float snapshotMove;
+
+    public GameObject titleEnd;
+    public string endComment;
+
 	static public int presentNum = 30;
 
 	static public int presentIndex = 0;
@@ -32,6 +38,9 @@ public class GameManager : MonoBehaviour {
     static public List<int> luckyPersonNum = new List<int>();
 
 	public GameObject lotterySystem;
+
+    public AudioMixerSnapshot startEndSnapshot;
+    public AudioMixerSnapshot playingSnapshot;
 
     // Use this for initialization
     void Awake () {
@@ -105,6 +114,9 @@ public class GameManager : MonoBehaviour {
         
 		if (state == STATE.Howto)
 		{//ゲームの説明
+            if(Input.GetKeyDown(KeyCode.A))
+                playingSnapshot.TransitionTo(snapshotMove);
+
 			if (HowTo.shownParagraph > HowTo.paragraphNum)
 				state = STATE.PresentShow;
 		}
@@ -113,8 +125,6 @@ public class GameManager : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.A))
 			{
 				//ここでプレゼントアニメーション
-
-
 				state = STATE.Lottery;
 			}
 		}
@@ -129,14 +139,21 @@ public class GameManager : MonoBehaviour {
 
 			if (Input.GetKeyDown(KeyCode.A) && next)
 			{
+                using (StreamWriter sw = new StreamWriter("result.txt",true))
+                {
+                    sw.WriteLine("presentIndex:"+(presentIndex+1));
+                    for (int i = 0; i < tmp.Length; i++)
+                        sw.Write(tmp[i].text.text + ",");
+                    sw.WriteLine("");
+                }
                 presentIndex++;
                 state = STATE.PresentShow;
 			}
 		}
 		else if (state == STATE.End)
 		{//ゲーム終了
-            if (Input.GetKeyDown(KeyCode.A))
-            GameManager.state = GameManager.STATE.End;
+            startEndSnapshot.TransitionTo(snapshotMove);
+            titleEnd.GetComponent<Text>().text = endComment;
         }
 
         //終了条件

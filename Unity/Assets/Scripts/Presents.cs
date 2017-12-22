@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Presents : MonoBehaviour {
 	public Texture2D[] presentTexture;
+    public GameObject commentObj; //Comment用のオブジェクト
 
 	RawImage rawImage;
 	RectTransform rect;
@@ -22,6 +23,7 @@ public class Presents : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        presentTexture = new Texture2D[GameManager.presentNum];
         using (StreamReader sr = new StreamReader("presentinfo.csv"))
         {
             int presentCount = 0;
@@ -45,6 +47,11 @@ public class Presents : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (GameManager.state == GameManager.STATE.Howto)
+        {
+            commentObj.GetComponent<Text>().text = "";
+        }
+
 		if (GameManager.state == GameManager.STATE.PresentShow) {//プレゼントの紹介
 			if (showFlag) {
 				showFlag = false;
@@ -52,6 +59,7 @@ public class Presents : MonoBehaviour {
 				rect.localPosition = originalPosition;
 				rawImage.color = prev;
 			}
+            commentObj.GetComponent<Text>().text = comments[GameManager.presentIndex];
 			rawImage.texture = presentTexture [GameManager.presentIndex];
 			rect = this.GetComponent<RectTransform> ();
 			rect.sizeDelta = CalculateRectSize (presentTexture [GameManager.presentIndex].width, presentTexture [GameManager.presentIndex].height, max);
@@ -67,9 +75,13 @@ public class Presents : MonoBehaviour {
 		} else if (GameManager.state == GameManager.STATE.PresentShow) {
 			if (Input.GetKeyDown (KeyCode.A)) {
 				Debug.Log ("PrevData Change");
-
 			}
-		}
+        }
+        else if (GameManager.state == GameManager.STATE.End)
+        {
+            Destroy(rawImage);
+            Destroy(commentObj);
+        }
     }
 
 
